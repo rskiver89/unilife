@@ -6,9 +6,9 @@ import {AiOutlineHeart, AiOutlineMail, AiOutlineSnippets} from 'react-icons/ai'
 function Header() {
   return (
     <div className='nav-container'>
-        {/* <Link to="/"> */}
+        <Link to="/" className='logo'>
             <h1><AiOutlineSnippets className='icon-logo' />UniLife</h1>
-        {/* </Link> */}
+        </Link>
         <nav>
             <ul className='nav-list'>
                 <li><AiOutlineHeart className='nav-icon' />Shortlist</li>

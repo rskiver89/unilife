@@ -22,6 +22,11 @@ li {
     margin: 4px;
 }
 
+.logo {
+    text-decoration: none;
+    color: white;
+}
+
 .icon-logo {
     margin: -4px 4px;
 }
