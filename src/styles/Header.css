@@ -1,0 +1,27 @@
+.nav-container {
+    background-color: #00a2e1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    align-items: center;
+    color: white;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin: 24px;
+}
+
+.nav-icon {
+    margin: 4px;
+}
+
+.icon-logo {
+    margin: -4px 4px;
+}
