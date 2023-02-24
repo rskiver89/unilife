@@ -1,0 +1,95 @@
+.homepage-container p {
+    font-size: 12px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-slogan {
+    word-wrap: none;
+    position: absolute;
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+/* Compare */
+
+.compare-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ecedee;
+    padding: 12px;
+    margin: 16px;
+    border-radius: 16px;
+}
+
+.compare-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.compare-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    margin: 12px;
+}
+
+.compare-item h3 {
+    margin: 12px;
+}
+
+.compare-icon {
+    width: 70px;
+    padding: 8px;
+    margin: 12px;
+}
+
+/* Instructions */
+
+.instructions-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 64px;
+}
+
+.instructions-container h3 {
+    margin-bottom: 12px;
+}
+
+.instructions-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    padding: 32px;
+}
+
+.instructions-content {
+    display: flex;
+}
+
+.instructions-content-text {
+    margin: 12px;
+}
+
+h3 {
+    font-weight: bolder;
+}
+
+.search-compare-btn {
+    width: 150px;
+    height: 32px;
+    border-radius: 12px;
+    background: #3A5295;
+    color: white;
+    margin: 20px 45px;
+}
