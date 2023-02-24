@@ -1,13 +1,14 @@
 import React from 'react'
 import '../styles/Homepage.css'
+import Banner from '../components/Banner'
 
 // Images
-import cover from '../assets/cover-img.png'
 import search from '../assets/Vector.png'
 import compare from '../assets/Vector-2.png'
 import bills from '../assets/Vector-3.png'
 import person from '../assets/person.png'
 import bestSelection from '../assets/Vector-4.png'
+import yourFavorite from '../assets/Vector-5.png'
 
 function Homepage() {
   const instructionIconStyle = {
@@ -25,8 +26,7 @@ function Homepage() {
         <h1 style={{fontSize:"3em"}}>with bills included</h1>
         <p style={{fontSize:"1em"}}>A simple and faster way to search for student accommodation</p>
         </div>
-
-        <img style={{width:'100%', filter:'brightness(50%)'}} src={cover} alt="Banner" />
+        <Banner />
       </div>
 
       <div className='compare-container'>
@@ -68,7 +68,7 @@ function Homepage() {
             </div>
 
             <div className='instructions-content'>
-            <img src={bestSelection} style={instructionIconStyle} />
+            <img src={yourFavorite} style={instructionIconStyle} />
               <div className='instructions-content-text'>
               <h3>Your favorite</h3>
               <p>Shortlist your favourite properties and send enquiries in one click.</p>
