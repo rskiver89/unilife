@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import cover from '../assets/cover-img.png'
-import '../styles/Homepage.css'
+import '../styles/Banner.css'
 
 function Banner() {
   const [city, setCity] = useState('');
@@ -20,7 +20,7 @@ function Banner() {
   return (
     <div className='banner-container'>
               <img style={{width:'100%', filter:'brightness(50%)'}} src={cover} alt="Banner" />
-              <div className='searchbar-container'>
+      <div className='searchbar-container'>
         <select value={city} onChange={handleCityChange}>
           <option value="" disabled selected hidden>Select a city</option>
           <option value="Kentwood">Kentwood</option>
@@ -32,8 +32,8 @@ function Banner() {
           <option value="1">1 bedroom</option>
           <option value="2">2 bedrooms</option>
         </select>
-      <button onClick={handleSearch}>Find Homes</button>
-    </div>
+        <button onClick={handleSearch}>Find Homes</button>
+      </div>
     </div>
   )
 }
