@@ -2,37 +2,17 @@ import React, { useState } from 'react'
 import cover from '../assets/cover-img.png'
 import '../styles/Banner.css'
 
-function Banner() {
-  const [city, setCity] = useState('');
-  const [bedrooms, setBedrooms] = useState('');
+function Banner(props) {
 
-  const handleCityChange = (event) => {
-    setCity(event.target.value);
-  }
+  const mainText = props.mainText
+  const subText = props.subText
 
-  const handleBedroomsChange = (event) => {
-    setBedrooms(event.target.value);
-  }
-
-  const handleSearch = () => {
-    console.log(`Searching for homes in ${city} with ${bedrooms} bedrooms`);
-  }
   return (
-    <div className='banner-container'>
-              <img style={{width:'100%', filter:'brightness(50%)'}} src={cover} alt="Banner" />
-      <div className='searchbar-container'>
-        <select value={city} onChange={handleCityChange}>
-          <option value="" disabled selected hidden>Select a city</option>
-          <option value="Kentwood">Kentwood</option>
-          <option value="New York">New York</option>
-          <option value="Chicago">Chicago</option>
-        </select>
-        <select value={bedrooms} onChange={handleBedroomsChange}>
-          <option value="" disabled selected hidden>Select number of bedrooms</option>
-          <option value="1">1 bedroom</option>
-          <option value="2">2 bedrooms</option>
-        </select>
-        <button onClick={handleSearch}>Find Homes</button>
+    <div className='banner'>
+      <img style={{width:'100%', filter:'brightness(50%)'}} src={cover} alt="Banner" />
+      <div className='banner-slogan'>
+        <h1 style={{fontSize:"3em"}}>{mainText}</h1>
+        <p style={{fontSize:"1em"}}>{subText}</p>
       </div>
     </div>
   )

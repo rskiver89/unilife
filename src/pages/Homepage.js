@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/Homepage.css'
+import '../styles/Banner.css'
 import Banner from '../components/Banner'
 
 // Images
@@ -11,6 +12,22 @@ import bestSelection from '../assets/Vector-4.png'
 import yourFavorite from '../assets/Vector-5.png'
 
 function Homepage() {
+  const [city, setCity] = useState('');
+  const [bedrooms, setBedrooms] = useState('');
+
+  const handleCityChange = (event) => {
+    setCity(event.target.value);
+  }
+
+  const handleBedroomsChange = (event) => {
+    setBedrooms(event.target.value);
+  }
+
+  const handleSearch = () => {
+    console.log(`Searching for homes in ${city} with ${bedrooms} bedrooms`);
+  }
+
+
   const instructionIconStyle = {
     width:'32px', 
     height: '32px', 
@@ -20,13 +37,25 @@ function Homepage() {
   return (
     <div className='homepage-container'>
 
-      <div className='banner'>
-        <div className='banner-slogan'>
-        <h1 style={{fontSize:"3em"}}>Find student homes</h1>
-        <h1 style={{fontSize:"3em"}}>with bills included</h1>
-        <p style={{fontSize:"1em"}}>A simple and faster way to search for student accommodation</p>
+      <div className='banner-container'>
+
+        <Banner mainText='Find student homes with bills included' subText='A simple and faster way to search for student accommodation' />
+
+        <div className='searchbar-container'>
+          <select value={city} onChange={handleCityChange}>
+            <option value="" disabled selected hidden>Select a city</option>
+            <option value="Kentwood">Kentwood</option>
+            <option value="New York">New York</option>
+            <option value="Chicago">Chicago</option>
+          </select>
+          <select value={bedrooms} onChange={handleBedroomsChange}>
+            <option value="" disabled selected hidden>Select number of bedrooms</option>
+            <option value="1">1 bedroom</option>
+            <option value="2">2 bedrooms</option>
+          </select>
+          <button onClick={handleSearch}>Find Homes</button>
         </div>
-        <Banner />
+
       </div>
 
       <div className='compare-container'>

@@ -1,9 +1,5 @@
 .banner-container {
-    display: flex;
     position: relative;
-    justify-content: center;
-    min-height: 260px;
-    width: 100%;
 }
 
 .banner {
@@ -14,43 +10,10 @@
 }
 
 .banner-slogan {
+    max-width: 500px;
     word-wrap: none;
     position: absolute;
     text-align: center;
     color: white;
     z-index: 10;
-}
-
-.searchbar-container {
-    background-color: rgba(255, 255, 255, 0.92);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    padding: 8px;
-    width: 80%;
-    max-height: 132px;
-    bottom: -40px;
-    border-radius: 24px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-select {
-    height: 40px;
-    width: 40%;
-    left: 276px;
-    top: 456px;
-    border-radius: 12px;
-    margin: 16px;
-}
-
-button {
-    background-color: #3A5295;
-    color: white;
-    height: 40px;
-    width: 20%;
-    left: 964px;
-    top: 456px;
-    border-radius: 12px;
-    margin: 16px;
 }
