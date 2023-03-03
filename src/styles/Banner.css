@@ -10,10 +10,9 @@
 }
 
 .banner-slogan {
-    max-width: 500px;
+    margin-bottom: 32px;
     word-wrap: none;
     position: absolute;
     text-align: center;
     color: white;
-    z-index: 10;
 }

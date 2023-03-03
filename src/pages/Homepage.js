@@ -39,7 +39,7 @@ function Homepage() {
 
       <div className='banner-container'>
 
-        <Banner mainText='Find student homes with bills included' subText='A simple and faster way to search for student accommodation' />
+        <Banner mainText='Find student homes' mainTextTwo='with bills included' subText='A simple and faster way to search for student accommodation' />
 
         <div className='searchbar-container'>
           <select value={city} onChange={handleCityChange}>

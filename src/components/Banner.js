@@ -5,13 +5,15 @@ import '../styles/Banner.css'
 function Banner(props) {
 
   const mainText = props.mainText
+  const mainTextTwo = props.mainTextTwo
   const subText = props.subText
 
   return (
     <div className='banner'>
       <img style={{width:'100%', filter:'brightness(50%)'}} src={cover} alt="Banner" />
       <div className='banner-slogan'>
-        <h1 style={{fontSize:"3em"}}>{mainText}</h1>
+        <h1 style={{fontSize:"2em"}}>{mainText}</h1>
+        <h1 style={{fontSize:"2em"}}>{mainTextTwo}</h1>
         <p style={{fontSize:"1em"}}>{subText}</p>
       </div>
     </div>
