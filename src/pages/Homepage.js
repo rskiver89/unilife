@@ -43,11 +43,11 @@ function Homepage({baseUrl}) {
 
       <SearchCity />
 
-      {/* <div className='cities-container'>
+      <div className='cities-container'>
         {cities.map(city => (
           <CityCard key={city.id} city={city} />
         ))}
-      </div> */}
+      </div>
 
       <div className='compare-container'>
 
