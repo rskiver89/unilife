@@ -1,0 +1,31 @@
+.searchbar-container {
+    background-color: rgba(255, 255, 255, 0.92);
+    display: flex;
+    position: absolute;
+    padding: 8px;
+    left: 10%;
+    width: 80%;
+    margin-top: -170px;
+    border-radius: 24px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+select {
+    height: 40px;
+    width: 40%;
+    left: 276px;
+    top: 456px;
+    border-radius: 12px;
+    margin: 16px;
+}
+
+button {
+    background-color: #3A5295;
+    color: white;
+    height: 40px;
+    width: 20%;
+    left: 964px;
+    top: 456px;
+    border-radius: 12px;
+    margin: 16px;
+}

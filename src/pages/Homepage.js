@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import '../styles/Homepage.css'
 import '../styles/Banner.css'
 import Banner from '../components/Banner'
+import SearchCity from '../components/SearchCity'
+import CityCard from '../components/CityCard'
 
 // Images
 import search from '../assets/Vector.png'
@@ -11,21 +14,8 @@ import person from '../assets/person.png'
 import bestSelection from '../assets/Vector-4.png'
 import yourFavorite from '../assets/Vector-5.png'
 
-function Homepage() {
-  const [city, setCity] = useState('');
-  const [bedrooms, setBedrooms] = useState('');
-
-  const handleCityChange = (event) => {
-    setCity(event.target.value);
-  }
-
-  const handleBedroomsChange = (event) => {
-    setBedrooms(event.target.value);
-  }
-
-  const handleSearch = () => {
-    console.log(`Searching for homes in ${city} with ${bedrooms} bedrooms`);
-  }
+function Homepage({baseUrl}) {
+  const [cities, setCities]=useState([])
 
 
   const instructionIconStyle = {
@@ -34,29 +24,30 @@ function Homepage() {
     marginTop: '12px'
   }
 
+
+  useEffect(() => {
+    axios.get(`${baseUrl}cities?limit=9`)
+    .then(res=>{
+      setCities(res.data.results)
+    })
+    .catch(err=> console.log(err))
+  }, [])
+
+
   return (
     <div className='homepage-container'>
 
       <div className='banner-container'>
-
         <Banner mainText='Find student homes' mainTextTwo='with bills included' subText='A simple and faster way to search for student accommodation' />
-
-        <div className='searchbar-container'>
-          <select value={city} onChange={handleCityChange}>
-            <option value="" disabled selected hidden>Select a city</option>
-            <option value="Kentwood">Kentwood</option>
-            <option value="New York">New York</option>
-            <option value="Chicago">Chicago</option>
-          </select>
-          <select value={bedrooms} onChange={handleBedroomsChange}>
-            <option value="" disabled selected hidden>Select number of bedrooms</option>
-            <option value="1">1 bedroom</option>
-            <option value="2">2 bedrooms</option>
-          </select>
-          <button onClick={handleSearch}>Find Homes</button>
-        </div>
-
       </div>
+
+      <SearchCity />
+
+      {/* <div className='cities-container'>
+        {cities.map(city => (
+          <CityCard key={city.id} city={city} />
+        ))}
+      </div> */}
 
       <div className='compare-container'>
 
@@ -65,7 +56,7 @@ function Homepage() {
         <div className='compare-content'>
 
           <div className='compare-item'> 
-        <img src={search} className='compare-icon' alt='Search' />
+            <img src={search} className='compare-icon' alt='Search' />
             <h3>Search</h3>
             <p>Find your dream home in the perfect area near your university.</p>
           </div>
@@ -89,7 +80,7 @@ function Homepage() {
 
           <div className='instructions-content-container'>
             <div className='instructions-content'>
-            <img src={bestSelection} style={instructionIconStyle} />
+              <img src={bestSelection} style={instructionIconStyle} />
               <div className='instructions-content-text'>
                 <h3>Best selection</h3>
                 <p>Best selection of student accommodations. Never been easier to find a home that’s right for you.</p>
@@ -97,13 +88,12 @@ function Homepage() {
             </div>
 
             <div className='instructions-content'>
-            <img src={yourFavorite} style={instructionIconStyle} />
+              <img src={yourFavorite} style={instructionIconStyle} />
               <div className='instructions-content-text'>
-              <h3>Your favorite</h3>
-              <p>Shortlist your favourite properties and send enquiries in one click.</p>
+                <h3>Your favorite</h3>
+                <p>Shortlist your favourite properties and send enquiries in one click.</p>
               </div>
             </div>
-
             <button className='search-compare-btn'>Search & Compare</button>
           </div>
 
