@@ -14,8 +14,7 @@ import person from '../assets/person.png'
 import bestSelection from '../assets/Vector-4.png'
 import yourFavorite from '../assets/Vector-5.png'
 
-function Homepage({baseUrl}) {
-  const [cities, setCities]=useState([])
+function Homepage({city}) {
 
 
   const instructionIconStyle = {
@@ -23,15 +22,6 @@ function Homepage({baseUrl}) {
     height: '32px', 
     marginTop: '12px'
   }
-
-
-  useEffect(() => {
-    axios.get(`${baseUrl}cities?limit=9`)
-    .then(res=>{
-      setCities(res.data.results)
-    })
-    .catch(err=> console.log(err))
-  }, [])
 
 
   return (
@@ -43,11 +33,7 @@ function Homepage({baseUrl}) {
 
       <SearchCity />
 
-      <div className='cities-container'>
-        {cities.map(city => (
-          <CityCard key={city.id} city={city} />
-        ))}
-      </div>
+      <CityCard />
 
       <div className='compare-container'>
 
