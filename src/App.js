@@ -5,12 +5,13 @@ import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import axios from 'axios';
+import SeeAllCities from './pages/SeeAllCities';
 
 function App() {
   const [cities, setCities] = useState([]);
 
   useEffect(()=>{
-    axios.get('https://unilife-server.herokuapp.com/cities?limit=9')
+    axios.get('https://unilife-server.herokuapp.com/cities')
     .then(res=>{
       console.log(res.data.response)
       setCities(res.data.response)
@@ -26,6 +27,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Homepage cities={cities} />} />
+          <Route path='/see-all-cities' element={<SeeAllCities cities={cities} />} />
         </Routes>
         <Footer />
       </BrowserRouter>

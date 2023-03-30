@@ -1,0 +1,21 @@
+.all-cities-card {
+    width: 300px;
+    text-align: center;
+    border: solid 1px rgb(184, 184, 184);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 12px;
+
+}
+
+
+
+.all-cities-card:hover {
+    background-color: #3A5295;
+    color: white;
+}
+
+.city-link {
+    text-decoration: none;
+    color: black;
+}

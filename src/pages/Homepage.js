@@ -4,6 +4,7 @@ import '../styles/Banner.css'
 import Banner from '../components/Banner'
 import SearchCity from '../components/SearchCity'
 import CityCard from '../components/CityCard'
+import { Link } from 'react-router-dom'
 
 // Images
 import search from '../assets/Vector.png'
@@ -32,13 +33,11 @@ function Homepage({cities}) {
 
       <SearchCity />
 
-      {/* <CityCard /> */}
-
       <div className='cities-container'>
     <h2 style={{marginBottom: '64px'}}>Student accommodations in our top cities</h2>
     <div className='cities-grid'>
       {
-                cities.map((item) => {
+                cities.splice(0, 9).map((item) => {
                     return <div className='city-item'> 
                     <img src={item.image_url} alt={item.name}  />
                     <div className='city-name'>
@@ -48,8 +47,8 @@ function Homepage({cities}) {
                     </div>
                 })
             }
-                  {/* <Link to='/see-all-cities' ><button>See all cities</button></Link> */}
     </div>
+    <Link to='/see-all-cities' ><button>See all cities</button></Link>
   </div>
 
 

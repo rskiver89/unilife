@@ -15,4 +15,5 @@
     position: absolute;
     text-align: center;
     color: white;
+    max-width: 500px;
 }
