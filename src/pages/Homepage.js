@@ -48,7 +48,7 @@ function Homepage({cities}) {
                 })
             }
     </div>
-    <Link to='/see-all-cities' ><button>See all cities</button></Link>
+    <Link to='/see-all-cities' ><button className='see-all-button'>See all cities</button></Link>
   </div>
 
 
