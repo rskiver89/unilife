@@ -32,7 +32,25 @@ function Homepage({cities}) {
 
       <SearchCity />
 
-      <CityCard />
+      {/* <CityCard /> */}
+
+      <div className='cities-container'>
+    <h2 style={{marginBottom: '64px'}}>Student accommodations in our top cities</h2>
+    <div className='cities-grid'>
+      {
+                cities.map((item) => {
+                    return <div className='city-item'> 
+                    <img src={item.image_url} alt={item.name}  />
+                    <div className='city-name'>
+                      <CityCard city={item} />
+                      <p style={{textAlign: 'center', margin: '8px'}}>{item.property_count} properties</p>
+                    </div>
+                    </div>
+                })
+            }
+                  {/* <Link to='/see-all-cities' ><button>See all cities</button></Link> */}
+    </div>
+  </div>
 
 
       <div className='compare-container'>
