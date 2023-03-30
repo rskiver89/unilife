@@ -10,10 +10,6 @@ function SearchCity() {
       setCity(event.target.value);
     }
   
-    const handleBedroomsChange = (event) => {
-      setBedrooms(event.target.value);
-    }
-  
     const handleSearch = () => {
       console.log(`Searching for homes in ${city} with ${bedrooms} bedrooms`);
     }
@@ -25,11 +21,6 @@ function SearchCity() {
       <option value="Kentwood">Kentwood</option>
       <option value="New York">New York</option>
       <option value="Chicago">Chicago</option>
-    </select>
-    <select defaultValue={bedrooms} onChange={handleBedroomsChange}>
-      <option value="" disabled selected hidden>Select number of bedrooms</option>
-      <option value="1">1 bedroom</option>
-      <option value="2">2 bedrooms</option>
     </select>
     <button onClick={handleSearch}>Find Homes</button>
   </div>

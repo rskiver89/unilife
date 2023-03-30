@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 import '../styles/Homepage.css'
 import '../styles/Banner.css'
 import Banner from '../components/Banner'
@@ -14,7 +13,7 @@ import person from '../assets/person.png'
 import bestSelection from '../assets/Vector-4.png'
 import yourFavorite from '../assets/Vector-5.png'
 
-function Homepage({city}) {
+function Homepage({cities}) {
 
 
   const instructionIconStyle = {
@@ -34,6 +33,7 @@ function Homepage({city}) {
       <SearchCity />
 
       <CityCard />
+
 
       <div className='compare-container'>
 
