@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: space-around;
     width: 400px;
+    height: 210px;
 }
 
 .footer-content-container {
