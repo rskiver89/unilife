@@ -4,23 +4,22 @@ import '../styles/Search.css'
 function SearchCity() {
 
     const [city, setCity] = useState('');
-    const [bedrooms, setBedrooms] = useState('');
   
     const handleCityChange = (event) => {
       setCity(event.target.value);
     }
   
     const handleSearch = () => {
-      console.log(`Searching for homes in ${city} with ${bedrooms} bedrooms`);
+      console.log(``);
     }
 
   return (
     <div className='searchbar-container'>
     <select defaultValue={city} onChange={handleCityChange}>
       <option value="" disabled selected hidden>Select a city</option>
-      <option value="Kentwood">Kentwood</option>
-      <option value="New York">New York</option>
-      <option value="Chicago">Chicago</option>
+      <option value="Newcastle">Newcastle</option>
+      <option value="Liverpool">Liverpool</option>
+      <option value="Nottingham">Nottingham</option>
     </select>
     <button onClick={handleSearch}>Find Homes</button>
   </div>

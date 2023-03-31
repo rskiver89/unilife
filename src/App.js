@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import axios from 'axios';
 import SeeAllCities from './pages/SeeAllCities';
+import CityDetails from './pages/CityDetails';
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage cities={cities} />} />
           <Route path='/see-all-cities' element={<SeeAllCities cities={cities} />} />
+          <Route path='/city-details' element={<CityDetails />} />
         </Routes>
         <Footer />
       </BrowserRouter>
