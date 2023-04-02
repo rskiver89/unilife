@@ -38,7 +38,7 @@ function Homepage({cities}) {
     <div className='cities-grid'>
       {
                 cities.splice(0, 9).map((item) => {
-                    return <div className='city-item'> 
+                    return <div className='city-item' key={item._id}> 
                     <img src={item.image_url} alt={item.name}  />
                     <div className='city-name'>
                       <CityCard key={item._id} city={item} />

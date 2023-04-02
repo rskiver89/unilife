@@ -16,7 +16,7 @@ function SearchCity() {
   return (
     <div className='searchbar-container'>
     <select defaultValue={city} onChange={handleCityChange} className='search-city'>
-      <option value="" disabled selected hidden>Select a city</option>
+      <option value="">Select a city</option>
       <option value="Newcastle">Newcastle</option>
       <option value="Liverpool">Liverpool</option>
       <option value="Nottingham">Nottingham</option>

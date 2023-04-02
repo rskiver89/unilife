@@ -20,7 +20,7 @@ Whatever you’re after, we can help you find the right student accommodation fo
       {
         cities?.map((item) => {
             return (
-              <Link to={'/city-details/'}>
+              <Link to={'/city-details/'} key={item?._id}>
                 <div className='all-cities-card'> 
                     <CityCard city={item} />
 
