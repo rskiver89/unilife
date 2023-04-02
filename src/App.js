@@ -28,8 +28,8 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Homepage cities={cities} />} />
-          <Route path='/see-all-cities' element={<SeeAllCities cities={cities} />} />
-          <Route path='/city-details' element={<CityDetails />} />
+          <Route path='/see-all-cities/' element={<SeeAllCities cities={cities} />} />
+          <Route path='/city-details/' element={<CityDetails />} />
         </Routes>
         <Footer />
       </BrowserRouter>

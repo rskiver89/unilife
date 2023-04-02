@@ -1,0 +1,16 @@
+.searchbar-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+select {
+    width: 100%;
+    min-width: 180px;
+    margin: 8px;
+    box-sizing: border-box;
+}
+
+h3 {
+    margin-left: 16px;
+}

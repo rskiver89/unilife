@@ -1,11 +1,23 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import CityCard from '../components/CityCard'
 import '../styles/CityCard.css'
 import '../styles/SeeAllCities.css'
 import Banner from '../components/Banner'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import axios from 'axios'
 
 function SeeAllCities({cities}) {
+  const {cityId} = useParams()
+  const [properties, setProperties] = useState([]);
+
+  useEffect(()=>{
+    axios.get('https://unilife-server.herokuapp.com/properties')
+    .then(res=>{
+      console.log(res.data)
+      setProperties(res.data)
+    })
+    .catch(err => console.log(err))
+  }, [])
 
 
   return (
@@ -14,11 +26,12 @@ function SeeAllCities({cities}) {
 Whatever you’re after, we can help you find the right student accommodation for you. ' />
 
     <div className='cities-container'>
+      <h1 style={{marginBottom: '24px'}}>Search by city</h1>
         <div className='cities-grid'>
       {
         cities?.map((item) => {
             return (
-                <Link className='city-link'>
+              <Link to={'/city-details/'}>
                 <div className='all-cities-card'> 
                     <CityCard city={item} />
 
