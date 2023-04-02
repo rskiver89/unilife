@@ -8,7 +8,7 @@ import {MdOutlineBedroomParent, MdOutlineBathtub, MdHome} from 'react-icons/md'
 import {IoLocationOutline} from 'react-icons/io5'
 import Students from '../assets/student-details.png'
 
-const PropertyDetails = () => {
+function PropertyDetails() {
   const [properties, setProperties] = useState([]);
 
   useEffect(()=>{
@@ -37,7 +37,7 @@ const PropertyDetails = () => {
           <div className='property-details'>
             <div className='price'>
             <h4>$ {property?.rent}</h4>
-            <p style={{fontSize: '12px'}}>pppw including bills</p>
+            <p style={{fontSize: '10px'}}>pppw including bills</p>
             </div>
             <div className='bedroom-bathroom'>
               <div className='bedroom'>
@@ -51,6 +51,7 @@ const PropertyDetails = () => {
             </div>
           </div>
           <div className='more-details'>
+            <div className='property-type-container'>
             <div className='property-type'>
             <p>{property?.property_type}</p>
             <p>{property?.furnished}</p>
@@ -58,6 +59,7 @@ const PropertyDetails = () => {
             <div className='location'>
               <IoLocationOutline />
               <address>{property?.address.street}, {property?.address.city}, {property?.address.postcode}</address>
+            </div>
             </div>
             <div className='view-home'>
               <Link to={`/home-details/`} style={{textDecoration: 'none'}} >

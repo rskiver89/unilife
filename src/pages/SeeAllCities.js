@@ -7,17 +7,6 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 function SeeAllCities({cities}) {
-  const {cityId} = useParams()
-  const [properties, setProperties] = useState([]);
-
-  useEffect(()=>{
-    axios.get('https://unilife-server.herokuapp.com/properties')
-    .then(res=>{
-      console.log(res.data)
-      setProperties(res.data)
-    })
-    .catch(err => console.log(err))
-  }, [])
 
 
   return (

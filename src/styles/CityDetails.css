@@ -42,13 +42,7 @@
     font-weight: bold;
     font-size: 14px;
     margin: 8px;
-  }
-  
-  .property-details p,
-  .more-details p {
-    margin: 0;
-  }
-  
+  }  
 
   .bedroom-bathroom {
     display: flex;
@@ -57,6 +51,11 @@
   .bedroom, .bathroom {
     display: flex;
     margin: 0 8px;
+  }
+
+  .property-type-container {
+    min-height: 80px;
+    margin: 8px;
   }
 
   .location {
