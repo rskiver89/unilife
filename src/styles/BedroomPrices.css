@@ -1,0 +1,17 @@
+.bedroom-prices {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+  }
+  
+  .bedroom {
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  .bedroom-price:not(:last-child) {
+    border-bottom: none;
+  }
+  

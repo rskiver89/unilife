@@ -7,6 +7,7 @@ import Homepage from './pages/Homepage';
 import axios from 'axios';
 import SeeAllCities from './pages/SeeAllCities';
 import CityDetails from './pages/CityDetails';
+import HomeDetails from './pages/HomeDetails';
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -30,6 +31,7 @@ function App() {
           <Route path='/' element={<Homepage cities={cities} />} />
           <Route path='/see-all-cities/' element={<SeeAllCities cities={cities} />} />
           <Route path='/city-details/' element={<CityDetails />} />
+          <Route path='/home-details/:propertyId' element={<HomeDetails />} />
         </Routes>
         <Footer />
       </BrowserRouter>

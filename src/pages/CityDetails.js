@@ -62,9 +62,10 @@ function PropertyDetails() {
             </div>
             </div>
             <div className='view-home'>
-              <Link to={`/home-details/`} style={{textDecoration: 'none'}} >
+            <Link to={`/home-details/${property._id}`} style={{textDecoration: 'none'}}>
               <h4> <MdHome /> View Home</h4>
-              </Link>
+            </Link>
+
             </div>
           </div>
         </div>
