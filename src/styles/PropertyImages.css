@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 60%;
     padding: 16px;
   }
   
   .main-image {
-    width: 100%;
+    min-width: 600px;
     height: auto;
     object-fit: cover;
     border-radius: 16px;
@@ -23,10 +23,16 @@
   }
   
   .thumbnails img {
-    width: 19%;
+    width: 120px;
     height: auto;
     object-fit: cover;
     cursor: pointer;
     border-radius: 8px;
+  }
+
+  @media (max-width: 980px) {
+    .property-images {
+        width: 100%;
+    }
   }
   

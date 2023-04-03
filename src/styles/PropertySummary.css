@@ -58,3 +58,8 @@
     width: 100%;
   }
   
+  @media (max-width: 980px) {
+    .property-summary-container {
+        width: 90%;
+    }
+  }

@@ -1,7 +1,8 @@
+
+
 .bedroom-prices-container {
   display: flex;
   flex-direction: column;
-  width: 50vh;
   border: 1px solid #ccc;
   border-radius: 16px;
 }
@@ -14,6 +15,6 @@
   padding: 8px;
 }
 
-/* .bedroom-prices:last-child {
+.bedroom-prices:last-child {
   border-bottom: none;
-} */
+}

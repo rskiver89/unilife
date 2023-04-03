@@ -1,5 +1,6 @@
 .components {
     display: flex;
+    margin: 16px;
 }
 
 .more-home-details {
@@ -8,16 +9,34 @@
 }
 
 .key-features {
-    margin: 16px 0;
+    margin: 64px 0;
 }
 
 .description {
-    width: 45%;
+    width: 60%;
     margin: 16px;
 }
 
 .bedrooms {
-    margin: 16px;
+    margin: 16px 16px 16px 32px;
+    width: 50%;
 }
 
+@media (max-width: 980px) {
+    .home-details-container {
+        align-items: center;
+    }
 
+    .components,
+    .more-home-details {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .description,
+    .bedrooms {
+        width: 90%;
+        margin: 16px 0;
+    }
+}
