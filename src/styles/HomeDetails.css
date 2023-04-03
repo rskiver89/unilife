@@ -1,0 +1,23 @@
+.components {
+    display: flex;
+}
+
+.more-home-details {
+     display: flex;
+     margin: 16px;
+}
+
+.key-features {
+    margin: 16px 0;
+}
+
+.description {
+    width: 45%;
+    margin: 16px;
+}
+
+.bedrooms {
+    margin: 16px;
+}
+
+

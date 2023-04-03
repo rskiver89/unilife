@@ -1,0 +1,60 @@
+.property-summary-container {
+    width: 50%;
+}
+
+.property-summary {
+    margin: 16px;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 16px;
+    text-align: center;
+  }
+  
+  .property-address {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+  }
+
+  .property-address h1 {
+    margin: 16px;
+    width: 50%;
+  }
+  
+  .summary-item {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 10px;
+    margin: 24px 8px;
+  }
+
+  .summary-name {
+    font-size: 12px;
+    font-weight: bolder;
+    margin-bottom: 8px;
+  }
+  
+  .summary-icon-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3A5295;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+  
+  .summary-icon {
+    margin-right: 5px;
+  }
+
+  .summary-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  button {
+    width: 100%;
+  }
+  

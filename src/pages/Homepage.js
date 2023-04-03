@@ -41,7 +41,7 @@ function Homepage({cities}) {
                     return <div className='city-item' key={item._id}> 
                     <img src={item.image_url} alt={item.name}  />
                     <div className='city-name'>
-                      <CityCard key={item._id} city={item} />
+                      <CityCard city={item} />
                       <p style={{textAlign: 'center', margin: '8px'}}>{item.property_count} properties</p>
                     </div>
                     </div>

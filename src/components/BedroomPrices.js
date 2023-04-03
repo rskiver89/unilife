@@ -1,14 +1,15 @@
 import React from 'react';
 import '../styles/BedroomPrices.css';
 
-const BedroomPrices = ({ bedroomPrices }) => {
+function BedroomPrices({ bedroomPrices }) {
   const bedrooms = Object.entries(bedroomPrices);
 
   return (
-    <div className="bedroom-prices">
+    <div className="bedroom-prices-container">
       {bedrooms.map(([bedroom, price], index) => (
-        <div key={index} className="bedroom-price">
-          <p className='bedroom'>Bedroom {index + 1} ${price}</p>
+        <div key={index} className="bedroom-prices">
+          <p className='bedroom'>Bedroom {index + 1} </p>
+          <p>${price}</p>
         </div>
       ))}
     </div>

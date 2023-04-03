@@ -1,17 +1,19 @@
+.bedroom-prices-container {
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+}
+
 .bedroom-prices {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    border: 1px solid #ccc;
-    border-radius: 16px;
-  }
-  
-  .bedroom {
-    border-bottom: 1px solid #ccc;
-    padding: 8px;
-  }
-  
-  .bedroom-price:not(:last-child) {
-    border-bottom: none;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  margin: 16px;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* .bedroom-prices:last-child {
+  border-bottom: none;
+} */
