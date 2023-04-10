@@ -21,7 +21,7 @@ function SearchCity() {
       <option value="Liverpool">Liverpool</option>
       <option value="Nottingham">Nottingham</option>
     </select>
-    <button onClick={handleSearch}>Find Homes</button>
+    <button onClick={handleSearch} className='find-homes-button'>Find Homes</button>
   </div>
   )
 }

@@ -4,8 +4,12 @@
 
 
 .see-all-button {
-    width: 200px;
-    margin-top: 28px;
+    background-color: #3A5295;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 12px;
+    margin: 16px 0;
 }
 
 /* Compare */

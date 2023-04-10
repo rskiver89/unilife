@@ -3,22 +3,42 @@ import axios from 'axios';
 import PropertyFilter from '../components/PropertyFilter';
 import Banner from '../components/Banner';
 import '../styles/CityDetails.css'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import {MdOutlineBedroomParent, MdOutlineBathtub, MdHome} from 'react-icons/md'
 import {IoLocationOutline} from 'react-icons/io5'
 import Students from '../assets/student-details.png'
 
 function CityDetails() {
+  const { city } = useParams();
   const [properties, setProperties] = useState([]);
 
-  useEffect(()=>{
-    axios.get('https://unilife-server.herokuapp.com/properties')
-    .then(res=>{
-      console.log(res.data.data)
-      setProperties(res.data.data)
-    })
-    .catch(err => console.log(err))
-  }, [])
+  useEffect(() => {
+    getAllProperties(city);
+  }, [city]);
+
+  const getAllProperties = async (city) => {
+    let currentPage = 1;
+    let allProperties = [];
+  
+    while (true) {
+      const response = await axios.get(
+        `https://unilife-server.herokuapp.com/properties?page=${currentPage}`
+      );
+      if (response.data.data.length === 0) {
+        break;
+      }
+  
+      allProperties = allProperties.concat(response.data.data);
+      currentPage++;
+    }
+  
+    // Filter the properties based on the city name
+    const cityProperties = allProperties.filter(
+      (property) => property.address.city.toLowerCase() === city.toLowerCase()
+    );
+  
+    setProperties(cityProperties);
+  };
 
   return (
     <div>

@@ -71,11 +71,13 @@ function HomeDetails() {
 ) : (
       <p>Loading property details...</p>
 )}
-    <ViewingModal
-      isOpen={isModalOpen}
-      address={`${property.address.street}, ${property.address.city}, ${property.address.postcode}`}
-      onClose={toggleModal}
-    />
+{property && (
+      <ViewingModal
+        isOpen={isModalOpen}
+        address={`${property.address.street}, ${property.address.city}, ${property.address.postcode}`}
+        onClose={toggleModal}
+      />
+)}
     </div>
   );
 }

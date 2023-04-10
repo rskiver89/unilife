@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import '../styles/Homepage.css'
 import '../styles/Banner.css'
 import Banner from '../components/Banner'

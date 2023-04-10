@@ -1,7 +1,6 @@
 .searchbar-container {
     background-color: rgba(255, 255, 255, 0.92);
     display: flex;
-    flex-direction: row;
     position: absolute;
     padding: 8px;
     left: 10%;
@@ -20,7 +19,7 @@
     margin: 16px;
 }
 
-button {
+.find-homes-button {
     background-color: #3A5295;
     color: white;
     height: 40px;
