@@ -4,6 +4,7 @@ import axios from 'axios';
 import PropertyImages from '../components/PropertyImages';
 import BedroomPrices from '../components/BedroomPrices';
 import PropertySummary from '../components/PropertySummary';
+import ViewingModal from '../components/ViewingModal';
 import '../styles/HomeDetails.css'
 import {HiOutlineCheck} from 'react-icons/hi'
 
@@ -12,6 +13,13 @@ function HomeDetails() {
   const { propertyId } = useParams();
   const [property, setProperty] = useState(null);
   const [keyFeatures, setKeyFeatures] = useState();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+};
+
+
   
 
   useEffect(() => {
@@ -33,7 +41,8 @@ function HomeDetails() {
         
         <div className='components'>
           <PropertyImages images={property.images} />
-          <PropertySummary property={property} />
+          <PropertySummary property={property} onBookViewingClick={toggleModal} />
+
         </div>
 
         <div className='more-home-details'>
@@ -62,7 +71,11 @@ function HomeDetails() {
 ) : (
       <p>Loading property details...</p>
 )}
-
+    <ViewingModal
+      isOpen={isModalOpen}
+      address={`${property.address.street}, ${property.address.city}, ${property.address.postcode}`}
+      onClose={toggleModal}
+    />
     </div>
   );
 }

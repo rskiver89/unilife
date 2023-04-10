@@ -3,7 +3,7 @@ import '../styles/PropertySummary.css';
 import {MdOutlineBedroomParent, MdOutlineBathtub, MdHome} from 'react-icons/md'
 import {AiOutlineHeart} from 'react-icons/ai';
 
-function PropertySummary({ property }) {
+function PropertySummary({ property, onBookViewingClick }) {
   return (
     <div className='property-summary-container'>
     <div className="property-summary">
@@ -53,7 +53,7 @@ function PropertySummary({ property }) {
     </div>
     <div className='summary-buttons'>
     <button style={{backgroundColor: 'white', color: 'black'}}><AiOutlineHeart style={{marginRight: '8px'}} />Shortlist</button>
-    <button>Book Viewing</button>
+    <button onClick={onBookViewingClick}>Book Viewing</button>
     </div>
     </div>
   );

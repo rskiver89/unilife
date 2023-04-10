@@ -12,14 +12,28 @@ import HomeDetails from './pages/HomeDetails';
 function App() {
   const [cities, setCities] = useState([]);
 
-  useEffect(()=>{
-    axios.get('https://unilife-server.herokuapp.com/cities')
-    .then(res=>{
-      console.log(res.data.response)
-      setCities(res.data.response)
-    })
-    .catch(err => console.log(err))
-  }, [])
+  useEffect(() => {
+    getAllCities();
+  }, []);
+
+  const getAllCities = async () => {
+    let currentPage = 1;
+    let allCities = [];
+
+    while (true) {
+      const response = await axios.get(
+        `https://unilife-server.herokuapp.com/cities?page=${currentPage}`
+      );
+      if (response.data.response.length === 0) {
+        break;
+      }
+
+      allCities = allCities.concat(response.data.response);
+      currentPage++;
+    }
+
+    setCities(allCities);
+  };
 
 
 
@@ -30,7 +44,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage cities={cities} />} />
           <Route path='/see-all-cities/' element={<SeeAllCities cities={cities} />} />
-          <Route path='/city-details/' element={<CityDetails />} />
+          <Route path='/city-details/:city' element={<CityDetails />} />
           <Route path='/home-details/:propertyId' element={<HomeDetails />} />
         </Routes>
         <Footer />

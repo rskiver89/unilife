@@ -8,7 +8,7 @@ import {MdOutlineBedroomParent, MdOutlineBathtub, MdHome} from 'react-icons/md'
 import {IoLocationOutline} from 'react-icons/io5'
 import Students from '../assets/student-details.png'
 
-function PropertyDetails() {
+function CityDetails() {
   const [properties, setProperties] = useState([]);
 
   useEffect(()=>{
@@ -87,4 +87,4 @@ function PropertyDetails() {
   );
 };
 
-export default PropertyDetails;
+export default CityDetails;
