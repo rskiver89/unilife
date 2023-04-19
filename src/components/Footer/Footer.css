@@ -2,20 +2,23 @@
     background-color: #00A2E1;
     display: flex;
     justify-content: space-around;
-    padding: 16px;
+    height: 250px;
+    padding: 32px;
     color: white;
 }
 
 .contact {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 400px;
-    height: 210px;
+    padding: 12px;
 }
 
 .footer-content-container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: black;
     position: absolute;
     bottom: -1;
@@ -27,22 +30,41 @@
 
 .footer-content {
     display: flex;
-    margin-left: 48px;
+    margin: 0 48px;
     font-size: 14px;
+}
+
+.footer-content li {
+    list-style: none;
+    margin: 12px;
+}
+
+.email-input {
+    height: 40px;
+    border-radius: 12px;
+    border: none;
 }
 
 .socialize {
     display: flex;
     flex-direction: column;
-    margin: 12px;
+    justify-content: space-between;
     padding: 12px;
 }
 
 .social-icon {
     display: flex;
-    margin: 16px 16px 16px 0;
 }
 
 .social-name {
     margin-left: 8px;
+}
+
+.copyright {
+    display: flex;
+    margin: 0 48px;
+}
+
+.copyright p {
+    margin: 12px;
 }

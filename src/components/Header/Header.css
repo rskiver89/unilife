@@ -12,7 +12,7 @@
     list-style-type: none;
 }
 
-li {
+.nav-list li {
     display: flex;
     align-items: center;
     margin: 24px;

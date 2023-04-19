@@ -34,14 +34,14 @@ function ContactUsModal({ isOpen, onClose }) {
                     <input name='phoneNumber' type="tel" placeholder="Enter your phone number" />
                   </div>
 
-                <div className='personal-info'>
-                    <label htmlFor='student'>Are you a..</label>
-                    <select name='student'>
+                  <div className='personal-info'>
+                      <label htmlFor='student'>Are you a..</label>
+                      <select name='student'>
                         <option value=''>Choose an option</option>
                         <option value='student'>Student</option>
                         <option value='non-student'>Non-Student</option>
-                    </select>
-                </div>
+                      </select>
+                  </div>
                 </div>
     
                 <div className='message-container'>

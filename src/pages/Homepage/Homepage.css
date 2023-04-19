@@ -2,71 +2,6 @@
     font-size: 12px;
 }
 
-
-.see-all-button {
-    background-color: #3A5295;
-    color: white;
-    height: 40px;
-    width: 150px;
-    border-radius: 12px;
-    margin: 16px 0;
-}
-
-/* Compare */
-
-.compare-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #ecedee;
-    padding: 12px;
-    margin: 16px;
-    border-radius: 16px;
-}
-
-.compare-content {
-    display: flex;
-    justify-content: space-around;
-}
-
-.compare-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    text-align: center;
-    margin: 12px;
-}
-
-.compare-item h3 {
-    margin: 12px;
-}
-
-.compare-icon {
-    width: 70px;
-    padding: 8px;
-    margin: 12px;
-}
-
-.cities-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 120px;
-  }
-  
-  .cities-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-  }
-
   /* City Card */
   
   .cities-container-home {
@@ -110,6 +45,52 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
 
+  .see-all-button {
+    background-color: #3A5295;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 12px;
+    margin: 16px 0;
+}
+
+/* Compare */
+
+.compare-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 12px;
+    margin: 16px;
+    border-radius: 16px;
+}
+
+.compare-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.compare-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    margin: 12px;
+}
+
+.compare-item h3 {
+    margin: 12px;
+}
+
+.compare-icon {
+    width: 70px;
+    padding: 8px;
+    margin: 12px;
+}
+
 /* Instructions */
 
 .instructions-container {
@@ -144,7 +125,7 @@ h3 {
 
 .search-compare-btn {
     width: 150px;
-    height: 32px;
+    height: 40px;
     border-radius: 12px;
     background: #3A5295;
     color: white;

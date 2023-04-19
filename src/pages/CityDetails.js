@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import PropertyFilter from '../components/PropertyFilter';
-import Banner from '../components/Banner';
+import PropertyFilter from '../components/PropertyFilter/PropertyFilter';
+import Banner from '../components/Banner/Banner';
 import '../styles/CityDetails.css';
 import { Link, useParams } from 'react-router-dom';
 import { MdOutlineBedroomParent, MdOutlineBathtub, MdHome } from 'react-icons/md';

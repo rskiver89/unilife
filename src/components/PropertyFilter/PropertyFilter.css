@@ -11,6 +11,6 @@ select {
     box-sizing: border-box;
 }
 
-h3 {
+.searchbar-container h3 {
     margin-left: 16px;
 }

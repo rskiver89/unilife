@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Homepage from './pages/Homepage';
+import Homepage from './pages/Homepage/Homepage';
 import axios from 'axios';
-import SeeAllCities from './pages/SeeAllCities';
+import SeeAllCities from './pages/SeeAllCities/SeeAllCities';
 import CityDetails from './pages/CityDetails';
 import HomeDetails from './pages/HomeDetails';
 

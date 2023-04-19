@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import CityCard from '../components/CityCard';
-import '../styles/SeeAllCities.css';
-import Banner from '../components/Banner';
+import CityCard from '../../components/CityCard/CityCard';
+import './SeeAllCities.css';
+import Banner from '../../components/Banner/Banner';
 
 function SeeAllCities({cities}) {
 
@@ -12,7 +12,7 @@ function SeeAllCities({cities}) {
 Whatever you’re after, we can help you find the right student accommodation for you. ' />
 
     <div className='cities-container'>
-      <h1 style={{marginBottom: '24px'}}>Search by city</h1>
+      <h1 style={{marginBottom: '32px'}}>Search by city</h1>
         <div className='cities-grid'>
                 {
           cities?.map((item) => {

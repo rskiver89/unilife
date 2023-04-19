@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import cover from '../assets/cover-img.png'
-import '../styles/Banner.css'
+import cover from '../../assets/cover-img.png'
+import './Banner.css'
 
 function Banner(props) {
 

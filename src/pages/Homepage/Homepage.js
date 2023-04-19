@@ -1,18 +1,18 @@
 import React from 'react'
-import '../styles/Homepage.css'
-import '../styles/Banner.css'
-import Banner from '../components/Banner'
-import SearchCity from '../components/SearchCity'
-import CityCard from '../components/CityCard'
+import './Homepage.css'
+import '../../components/Banner/Banner.css'
+import Banner from '../../components/Banner/Banner'
+import SearchCity from '../../components/SearchCity/SearchCity'
+import CityCard from '../../components/CityCard/CityCard'
 import { Link } from 'react-router-dom'
 
 // Images
-import search from '../assets/Vector.png'
-import compare from '../assets/Vector-2.png'
-import bills from '../assets/Vector-3.png'
-import person from '../assets/person.png'
-import bestSelection from '../assets/Vector-4.png'
-import yourFavorite from '../assets/Vector-5.png'
+import search from '../../assets/Vector.png'
+import compare from '../../assets/Vector-2.png'
+import bills from '../../assets/Vector-3.png'
+import person from '../../assets/person.png'
+import bestSelection from '../../assets/Vector-4.png'
+import yourFavorite from '../../assets/Vector-5.png'
 
 function Homepage({cities}) {
 
