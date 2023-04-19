@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/PropertySummary.css';
+import './PropertySummary.css';
 import {MdOutlineBedroomParent, MdOutlineBathtub, MdHome} from 'react-icons/md'
 import {AiOutlineHeart} from 'react-icons/ai';
 

@@ -19,7 +19,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
+    gap: 12px;
+    width: 60%;
+    margin-top: 32px;
   }
   
   .thumbnails img {

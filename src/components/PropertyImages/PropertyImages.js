@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/PropertyImages.css';
+import './PropertyImages.css';
 
 function PropertyImages({ images }) {
   const [mainImage, setMainImage] = useState(images[0]);

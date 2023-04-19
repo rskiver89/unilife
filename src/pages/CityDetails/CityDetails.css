@@ -34,11 +34,12 @@
   .property-details {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 1rem;
     background-color: #3A5295;
     color: white;
     margin: 0;
-    padding: 8px;
+    padding: 12px;
   }
 
   .property-type{
@@ -46,7 +47,7 @@
     justify-content: space-between;
     font-weight: bold;
     font-size: 14px;
-    margin: 16px 8px 8px 8px;
+    margin: 8px;
   }  
 
   .bedroom-bathroom {
@@ -80,6 +81,7 @@
 
   .view-home h4 {
     margin: 3px 0 0 3px;
+    font-weight: 100;
   }
   
   .student-container {

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import PropertyImages from '../components/PropertyImages';
+import PropertyImages from '../components/PropertyImages/PropertyImages';
 import BedroomPrices from '../components/BedroomPrices';
-import PropertySummary from '../components/PropertySummary';
+import PropertySummary from '../components/PropertySummary/PropertySummary';
 import ViewingModal from '../components/Modals/ViewingModal';
 import '../styles/HomeDetails.css'
 import {HiOutlineCheck} from 'react-icons/hi'
