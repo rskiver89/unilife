@@ -51,9 +51,9 @@ function PropertySummary({ property, onBookViewingClick }) {
         </div>
       </div>
     </div>
-    <div className='summary-buttons'>
-    <button style={{backgroundColor: 'white', color: 'black'}}><AiOutlineHeart style={{marginRight: '8px'}} />Shortlist</button>
-    <button onClick={onBookViewingClick}>Book Viewing</button>
+    <div className='summary-buttons-container'>
+    <button className='summary-button' style={{backgroundColor: 'white', color: 'black'}}><AiOutlineHeart style={{marginRight: '8px'}} />Shortlist</button>
+    <button className='summary-button' onClick={onBookViewingClick}>Book Viewing</button>
     </div>
     </div>
   );

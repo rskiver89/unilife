@@ -1,10 +1,7 @@
-import React, {useState, useEffect} from 'react'
-import CityCard from '../components/CityCard'
-import '../styles/CityCard.css'
-import '../styles/SeeAllCities.css'
-import Banner from '../components/Banner'
-import { Link, useParams } from 'react-router-dom'
-import axios from 'axios'
+import React, {useState, useEffect} from 'react';
+import CityCard from '../components/CityCard';
+import '../styles/SeeAllCities.css';
+import Banner from '../components/Banner';
 
 function SeeAllCities({cities}) {
 
@@ -17,16 +14,15 @@ Whatever you’re after, we can help you find the right student accommodation fo
     <div className='cities-container'>
       <h1 style={{marginBottom: '24px'}}>Search by city</h1>
         <div className='cities-grid'>
-      {
-        cities?.map((item) => {
+                {
+          cities?.map((item) => {
             return (
-                <div className='all-cities-card'> 
-                    <CityCard city={item} />
-
-                </div>
-            )
-        })
-      }
+              <div className='all-cities-card'> 
+                <CityCard city={item} fontColor='black' />
+              </div>
+            );
+          })
+        }
       </div>
     </div>
     </div>

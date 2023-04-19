@@ -4,7 +4,7 @@ import axios from 'axios';
 import PropertyImages from '../components/PropertyImages';
 import BedroomPrices from '../components/BedroomPrices';
 import PropertySummary from '../components/PropertySummary';
-import ViewingModal from '../components/ViewingModal';
+import ViewingModal from '../components/Modals/ViewingModal';
 import '../styles/HomeDetails.css'
 import {HiOutlineCheck} from 'react-icons/hi'
 

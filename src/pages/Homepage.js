@@ -33,15 +33,15 @@ function Homepage({cities}) {
 
       <SearchCity />
 
-      <div className='cities-container'>
+      <div className='cities-container-home'>
     <h2 style={{marginBottom: '24px'}}>Student accommodations in our top cities</h2>
-    <div className='cities-grid'>
+    <div className='cities-grid-home'>
       {
                 cities.splice(0, 9).map((item) => {
                     return <div className='city-item' key={item._id}> 
                     <img src={item.image_url} alt={item.name}  />
                     <div className='city-name'>
-                      <CityCard city={item} />
+                      <CityCard city={item} fontColor='white' />
                       <p style={{textAlign: 'center', margin: '8px'}}>{item.property_count} properties</p>
                     </div>
                     </div>

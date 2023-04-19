@@ -1,6 +1,7 @@
 import React from 'react';
-import '../styles/ViewingModal.css';
+import './Modals.css';
 import { MdOutlineAddHomeWork } from 'react-icons/md';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 function ViewingModal({ isOpen, address, onClose }) {
   if (!isOpen) {
@@ -8,9 +9,9 @@ function ViewingModal({ isOpen, address, onClose }) {
   }
 
   return (
-    <div className="viewing-modal-backdrop">
-              <button onClick={onClose} className="close-button">X</button>
-      <div className="viewing-modal">
+    <div className="modal-backdrop">
+      <div className="modal">
+        <button onClick={onClose} className="close-button"><AiOutlineCloseCircle size={15} /></button>
         <div className='modal-header-container'>
           <div className='modal-header'>
             <h2 style={{marginBottom: '16px'}}>Book a Viewing</h2>

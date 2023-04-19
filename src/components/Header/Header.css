@@ -30,3 +30,7 @@ li {
 .icon-logo {
     margin: -4px 4px;
 }
+
+.contact-us {
+    cursor: pointer;
+}

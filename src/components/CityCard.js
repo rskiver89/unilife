@@ -1,22 +1,16 @@
 import React from 'react';
 import '../styles/CityCard.css'
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
-function CityCard({city}) {
-  const navigate = useNavigate();
-
-  const handleCityClick = () => {
-    navigate(`/city-details/${city.name}`);
-  };
-
+function CityCard({ city, fontColor}) {
   return (
-    <div onClick={handleCityClick}>
-       <Link to={`/city-details/${city.name}`}>
-        <h3>{city.name}</h3>
-      </Link>
-    </div>
+    <Link
+      to={`/city-details/${city.name}`}
+      className={`city-card-link city-card-link-${fontColor}`}
+    >
+      <h3>{city.name}</h3>
+    </Link>
   );
-};
+}
 
 export default CityCard;

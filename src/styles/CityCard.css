@@ -1,40 +1,19 @@
-.cities-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 120px;
+.city-card-link {
+  text-decoration: none;
 }
 
-.cities-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
+.city-card-link-white {
+  color: white;
 }
 
-.city-item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+.city-card-link-white:hover {
+  color: white;
 }
 
-.city-item img {
-  width: 300px;
-  height: 200px;
-  border-radius: 16px;
-  filter: blur(2px) brightness(60%);
+.city-card-link-black {
+  color: black;
 }
 
-.city-name {
-  position: absolute;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 24px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+.city-card-link-black:hover {
+  color: white;
 }
