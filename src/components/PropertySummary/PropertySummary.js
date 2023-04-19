@@ -8,7 +8,7 @@ function PropertySummary({ property, onBookViewingClick }) {
     <div className='property-summary-container'>
     <div className="property-summary">
         <div className='property-address'>
-      <h1>{property.address.street}, {property.address.city}, {property.address.postcode}</h1>
+          <h1>{property.address.street}, {property.address.city}, {property.address.postcode}</h1>
         </div>
       <div>
         <div className='summary-item'>

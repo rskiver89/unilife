@@ -15,6 +15,7 @@
     justify-content: center;
     margin-bottom: 20px;
     border-bottom: 1px solid gray;
+    font-weight: 300;
   }
 
   .property-address h1 {
@@ -28,7 +29,7 @@
     width: 30%;
     vertical-align: top;
     padding: 10px;
-    margin: 24px 8px;
+    margin: 16px 8px;
   }
 
   .summary-name {
@@ -44,6 +45,7 @@
     font-size: 24px;
     font-weight: bolder;
     margin: 12px;
+    font-weight: 500;
   }
   
   .summary-icon {
@@ -67,8 +69,10 @@
     margin: 32px 8px;
   }
   
-  @media (max-width: 980px) {
+  @media (max-width: 1110px) {
     .property-summary-container {
         width: 90%;
     }
   }
+
+  
