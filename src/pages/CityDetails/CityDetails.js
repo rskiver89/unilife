@@ -105,7 +105,7 @@ function CityDetails({ cityDetails }) {
         {currentCity && (
           <>
             <h2 style={{fontWeight: '500'}}>Being a student in {currentCity?.name}</h2>
-            <p>{currentCity?.student_life}</p>
+            <p style={{margin: '24px 0 12px 0'}}>{currentCity?.student_life}</p>
             <p>{currentCity?.universities}</p>
           </>
         )}
