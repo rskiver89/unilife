@@ -17,7 +17,7 @@ Whatever you’re after, we can help you find the right student accommodation fo
                 {
           cities?.map((item) => {
             return (
-              <div className='all-cities-card'> 
+              <div className='all-cities-card' key={item.name}> 
                 <CityCard city={item} fontColor='black' />
               </div>
             );

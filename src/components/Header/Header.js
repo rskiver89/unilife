@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
 import { AiOutlineHeart, AiOutlineMail, AiOutlineSnippets } from 'react-icons/ai';
 import ContactUsModal from '../Modals/ContactUsModal';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
   const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
@@ -15,13 +15,19 @@ function Header() {
     setIsContactUsModalOpen(false);
   };
 
+  const navigate = useNavigate();
+
+  const navigateToHomepage = () => {
+    navigate('/');
+  };
+
   return (
     <div className='nav-container'>
-      <Link to='/' className='logo'>
+      <div onClick={navigateToHomepage} className='logo'>
         <h1>
           <AiOutlineSnippets className='icon-logo' />UniLife
         </h1>
-      </Link>
+      </div>
       <nav>
         <ul className='nav-list'>
           <li>
