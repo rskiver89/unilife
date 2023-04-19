@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    padding: 16px;
 }
 
 select {
@@ -13,4 +14,5 @@ select {
 
 .searchbar-container h3 {
     margin-left: 16px;
+    font-weight: 500;
 }

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import '../styles/PropertyFilter.css'
+import './PropertyFilter.css'
 
 function PropertyFilter() {
 
