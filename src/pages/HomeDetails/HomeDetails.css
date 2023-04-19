@@ -8,8 +8,18 @@
      margin: 16px;
 }
 
+.more-home-details h2 {
+    margin: 16px 0;
+    font-weight: 500;
+}
+
 .key-features {
     margin: 64px 0;
+}
+
+.key-features li {
+    margin: 24px 0;
+    list-style: none;
 }
 
 .description {
@@ -22,7 +32,7 @@
     width: 50%;
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 1145px) {
     .home-details-container {
         align-items: center;
     }

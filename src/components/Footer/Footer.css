@@ -7,6 +7,10 @@
     color: white;
 }
 
+.contact-container p {
+    font-weight: 300;
+}
+
 .contact {
     display: flex;
     flex-direction: column;

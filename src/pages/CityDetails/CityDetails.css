@@ -45,10 +45,14 @@
   .property-type{
     display: flex;
     justify-content: space-between;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 14px;
     margin: 8px;
   }  
+
+  .price h4 {
+    font-weight: 500;
+  }
 
   .bedroom-bathroom {
     display: flex;
@@ -81,7 +85,7 @@
 
   .view-home h4 {
     margin: 3px 0 0 3px;
-    font-weight: 100;
+    font-weight: 300;
   }
   
   .student-container {
@@ -107,6 +111,7 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
+    font-weight: 300;
   }
   
   .student-container img {

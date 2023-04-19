@@ -4,4 +4,9 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Epilogue', sans-serif;
+    letter-spacing: 1px;
+}
+
+p {
+    line-height: 24px;
 }

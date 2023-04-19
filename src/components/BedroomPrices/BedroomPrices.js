@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/BedroomPrices.css';
+import './BedroomPrices.css';
 
 function BedroomPrices({ bedroomPrices }) {
   const bedrooms = Object.entries(bedroomPrices);
