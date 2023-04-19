@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage/Homepage';
 import axios from 'axios';
 import SeeAllCities from './pages/SeeAllCities/SeeAllCities';
-import CityDetails from './pages/CityDetails';
+import CityDetails from './pages/CityDetails/CityDetails';
 import HomeDetails from './pages/HomeDetails';
 
 function App() {

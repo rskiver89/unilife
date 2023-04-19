@@ -1,10 +1,15 @@
 /* CityDetails.css */
 
-.properties-wrapper {
+.properties-wrapper, .student-wrapper {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+  }
+
+  .homes-in-city {
+    margin: -36px 0 36px 0;
+    font-weight: 500;
   }
   
   .properties-container {
@@ -41,7 +46,7 @@
     justify-content: space-between;
     font-weight: bold;
     font-size: 14px;
-    margin: 8px;
+    margin: 16px 8px 8px 8px;
   }  
 
   .bedroom-bathroom {
@@ -55,7 +60,7 @@
 
   .property-type-container {
     min-height: 80px;
-    margin: 8px;
+    margin: 24px 12px -12px 12px;
   }
 
   .location {
@@ -70,6 +75,11 @@
     border-top: 1px solid #ccc;
     font-weight: bold;
     padding: 12px;
+    color: black;
+  }
+
+  .view-home h4 {
+    margin: 3px 0 0 3px;
   }
   
   .student-container {
@@ -77,10 +87,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    background-color: #ecedee;
+    background-color: #f2f2f2;
     padding: 12px;
-    margin: 16px;
+    margin: 32px 0;
     border-radius: 16px;
+    width: 100%;
   }
   
   .student-info {
