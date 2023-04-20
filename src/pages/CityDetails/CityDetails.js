@@ -8,16 +8,40 @@ import { MdOutlineBedroomParent, MdOutlineBathtub, MdHome } from 'react-icons/md
 import { IoLocationOutline } from 'react-icons/io5';
 import Students from '../../assets/student-details.png';
 
-function CityDetails({ cityDetails }) {
+function CityDetails() {
   const { city } = useParams();
   const [properties, setProperties] = useState([]);
-  const currentCity = cityDetails.find(
-    (item) => item.name.toLowerCase() === city.toLowerCase()
-  );
+  const [currentCity, setCurrentCity] = useState(null);
+  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
+    getCityDetails(city);
     getAllProperties(city);
   }, [city]);
+
+  const getCityDetails = async (city) => {
+    let currentPage = 1;
+    let allCities = [];
+
+    while (true) {
+      const response = await axios.get(
+        `https://unilife-server.herokuapp.com/cities?page=${currentPage}`
+      );
+      if (response.data.response.length === 0) {
+        break;
+      }
+
+      allCities = allCities.concat(response.data.response);
+      currentPage++;
+    }
+
+    const foundCity = allCities.find(
+      (item) => item.name.toLowerCase() === city.toLowerCase()
+    );
+    setCurrentCity(foundCity);
+    setLoading(false);
+  };
 
   const getAllProperties = async (city) => {
     let currentPage = 1;
@@ -41,6 +65,7 @@ function CityDetails({ cityDetails }) {
     );
 
     setProperties(cityProperties);
+    setLoading(false);
   };
 
   return (

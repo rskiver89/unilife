@@ -18,28 +18,35 @@ function App() {
   useEffect(() => {
     getAllCities();
   }, []);
-
-  const getAllCities = async () => {
+  
+  const getAllCities = () => {
     let currentPage = 1;
     let allCities = [];
-
-    while (true) {
-      const response = await axios.get(
-        `https://unilife-server.herokuapp.com/cities?page=${currentPage}`
-      );
-      if (response.data.response.length === 0) {
-        break;
-      }
-
-      allCities = allCities.concat(response.data.response);
-      setCityDetails(response.data.response);
-      currentPage++;
-    }
-
-    setFirstNineCities(allCities.slice(0, 9));
-    setAllCities(allCities);
-    setLoading(false);
+  
+    const fetchCities = () => {
+      axios
+        .get(`https://unilife-server.herokuapp.com/cities?page=${currentPage}`)
+        .then((response) => {
+          if (response.data.response.length === 0) {
+            setFirstNineCities(allCities.slice(0, 9));
+            setAllCities(allCities);
+            setLoading(false);
+            return;
+          }
+  
+          allCities = allCities.concat(response.data.response);
+          setCityDetails(response.data.response);
+          currentPage++;
+          fetchCities();
+        })
+        .catch((error) => {
+          console.error('Error fetching cities:', error);
+        });
+    };
+  
+    fetchCities();
   };
+  
 
   return (
     <div>

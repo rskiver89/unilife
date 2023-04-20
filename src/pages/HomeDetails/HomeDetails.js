@@ -19,9 +19,6 @@ function HomeDetails() {
     setIsModalOpen(!isModalOpen);
 };
 
-
-  
-
   useEffect(() => {
     axios
       .get(`https://unilife-server.herokuapp.com/properties/${propertyId}`)

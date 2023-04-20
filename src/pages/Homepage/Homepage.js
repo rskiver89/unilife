@@ -37,7 +37,7 @@ function Homepage({cities}) {
     <h2 style={{marginBottom: '24px'}}>Student accommodations in our top cities</h2>
     <div className='cities-grid-home'>
       {
-                cities?.map((item) => {
+                cities.map((item) => {
                     return <div className='city-item' key={item._id}> 
                     <img src={item.image_url} alt={item.name}  />
                     <div className='city-name'>

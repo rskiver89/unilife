@@ -26,6 +26,7 @@
     text-decoration: none;
     color: white;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .icon-logo {
