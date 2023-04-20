@@ -32,7 +32,7 @@ function Homepage({cities}) {
       </div>
 
       <SearchCity />
-
+      <div className='cities-wrapper'>
       <div className='cities-container-home'>
     <h2 style={{marginBottom: '24px'}}>Student accommodations in our top cities</h2>
     <div className='cities-grid-home'>
@@ -50,8 +50,8 @@ function Homepage({cities}) {
     </div>
     <Link to='/see-all-cities' ><button className='see-all-button'>See all cities</button></Link>
   </div>
-
-
+  </div>
+      <div className='compare-wrapper'>
       <div className='compare-container'>
 
         <h2>Compare all inclusive student homes.</h2>
@@ -77,6 +77,7 @@ function Homepage({cities}) {
           </div>
 
         </div>
+      </div>
       </div>
 
         <div className='instructions-container'>

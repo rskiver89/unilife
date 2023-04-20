@@ -3,16 +3,19 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 16px;
+    margin-top: -175px;
 }
 
 select {
-    width: 100%;
-    min-width: 180px;
+    width: 160px;
+    height: 40%;
     margin: 8px;
     box-sizing: border-box;
 }
 
 .searchbar-container h3 {
-    margin-left: 16px;
-    font-weight: 500;
+    margin-left: 12px;
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 16px;
 }
