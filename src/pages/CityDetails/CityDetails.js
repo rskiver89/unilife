@@ -141,7 +141,7 @@ function CityDetails() {
             </>
           )}
         </div>
-        <img src={Students} style={{ width: '40%' }} />
+        <img src={Students} className='student-image' />
       </div>
     </div>
   </div>

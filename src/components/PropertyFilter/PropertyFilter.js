@@ -5,7 +5,7 @@ function PropertyFilter() {
 
     
   return (
-    <div className='searchbar-container'>
+    <div className='filter-container'>
 
       <div className='min-bedroom'>
           <h3>Min Bedroom</h3>
@@ -37,9 +37,9 @@ function PropertyFilter() {
         <div className='home-type'>
           <h3>Home Type</h3>
           <select defaultValue='0'>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
+              <option value="apartment">Apartment</option>
+              <option value="detached">Detached</option>
+              <option value="semi-detached">Semi-Detached</option>
           </select>
         </div>
 

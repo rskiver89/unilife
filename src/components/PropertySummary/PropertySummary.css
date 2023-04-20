@@ -15,7 +15,6 @@
     justify-content: center;
     margin-bottom: 20px;
     border-bottom: 1px solid gray;
-    font-weight: 300;
   }
 
   .property-address h1 {
@@ -43,7 +42,6 @@
     align-items: center;
     color: #3A5295;
     font-size: 24px;
-    font-weight: bolder;
     margin: 12px;
     font-weight: 500;
   }

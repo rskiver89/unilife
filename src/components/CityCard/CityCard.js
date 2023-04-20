@@ -8,7 +8,7 @@ function CityCard({ city, fontColor}) {
       to={`/city-details/${city?.name}`}
       className={`city-card-link city-card-link-${fontColor}`}
     >
-      <h3>{city.name}</h3>
+      <h3 className='city-card-name'>{city.name}</h3>
     </Link>
   );
 }

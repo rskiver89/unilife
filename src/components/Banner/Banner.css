@@ -1,7 +1,3 @@
-.banner-container {
-    position: relative;
-}
-
 .banner {
     display: flex;
     justify-content: center;

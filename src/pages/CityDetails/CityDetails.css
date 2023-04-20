@@ -14,13 +14,12 @@
   
   .properties-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 2rem;
   }
   
   .property-details-container {
     border: 1px solid #ccc;
-    border-radius: 4px;
     display: flex;
     flex-direction: column;
     border-radius: 16px;
@@ -114,8 +113,23 @@
     font-weight: 300;
   }
   
-  .student-container img {
-    max-width: 40%;
+  .student-image {
+    width: 500px;
     margin: 16px;
   }
   
+  @media screen and (max-width: 970px) {
+    .student-container {
+      flex-direction: column;
+    }
+
+    .student-info {
+      max-width: 80%;
+    }
+  }
+
+    @media screen and (max-width: 730px) {
+      .student-image {
+        width: 75%;
+      }
+    }

@@ -2,6 +2,7 @@
     background-color: #00a2e1;
     display: flex;
     justify-content: space-between;
+    height: 90px;
     padding: 0 24px;
     align-items: center;
     color: white;
@@ -15,7 +16,7 @@
 .nav-list li {
     display: flex;
     align-items: center;
-    margin: 24px;
+    margin: 8px;
 }
 
 .nav-icon {
@@ -30,7 +31,7 @@
 }
 
 .icon-logo {
-    margin: -4px 4px;
+    margin-right: 8px;
 }
 
 .contact-us {

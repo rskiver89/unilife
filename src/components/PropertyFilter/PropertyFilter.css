@@ -1,9 +1,15 @@
-.searchbar-container {
+.filter-container {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 16px;
     margin-top: -175px;
+    background-color: rgba(255, 255, 255, 0.92);
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    border-radius: 24px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 select {
@@ -13,9 +19,9 @@ select {
     box-sizing: border-box;
 }
 
-.searchbar-container h3 {
+.filter-container h3 {
     margin-left: 12px;
     margin-top: 12px;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
 }

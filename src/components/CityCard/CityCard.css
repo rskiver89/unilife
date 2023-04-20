@@ -18,3 +18,7 @@
 .city-card-link-black:hover {
   color: white;
 }
+
+.city-card-name {
+  font-weight: 500;
+}

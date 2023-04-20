@@ -36,7 +36,7 @@ function HomeDetails() {
       {property ? (
       <div>
         <div className='components'>
-          <PropertyImages images={property.images} />
+          <PropertyImages images={property?.images} />
           <PropertySummary property={property} onBookViewingClick={toggleModal} />
         </div>
 
@@ -61,7 +61,7 @@ function HomeDetails() {
 
           <div className='bedrooms'>
             <h2>Bedroom Prices</h2>
-            <BedroomPrices bedroomPrices={property.bedroom_prices} />
+            <BedroomPrices bedroomPrices={property?.bedroom_prices} />
           </div>
 
         </div>
@@ -73,7 +73,7 @@ function HomeDetails() {
         {property && (
               <ViewingModal
                 isOpen={isModalOpen}
-                address={`${property.address.street}, ${property.address.city}, ${property.address.postcode}`}
+                address={`${property?.address.street}, ${property?.address.city}, ${property?.address.postcode}`}
                 onClose={toggleModal}
               />
         )}     
