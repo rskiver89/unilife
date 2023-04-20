@@ -15,37 +15,30 @@ function App() {
   const [cityDetails, setCityDetails] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const getAllCities = (currentPage = 1, cities = []) => {
+    axios
+      .get(`https://unilife-server.herokuapp.com/cities?page=${currentPage}`)
+      .then((response) => {
+        if (response.data.response.length === 0) {
+          setFirstNineCities(cities.slice(0, 9));
+          setAllCities(cities);
+          setLoading(false);
+          return;
+        }
+
+        const updatedCities = cities.concat(response.data.response);
+        setCityDetails(response.data.response);
+        setAllCities(updatedCities);
+        getAllCities(currentPage + 1, updatedCities);
+      })
+      .catch((error) => {
+        console.error('Error fetching cities:', error);
+      });
+  };
+
   useEffect(() => {
     getAllCities();
   }, []);
-  
-  const getAllCities = () => {
-    let currentPage = 1;
-    let allCities = [];
-  
-    const fetchCities = () => {
-      axios
-        .get(`https://unilife-server.herokuapp.com/cities?page=${currentPage}`)
-        .then((response) => {
-          if (response.data.response.length === 0) {
-            setFirstNineCities(allCities.slice(0, 9));
-            setAllCities(allCities);
-            setLoading(false);
-            return;
-          }
-  
-          allCities = allCities.concat(response.data.response);
-          setCityDetails(response.data.response);
-          currentPage++;
-          fetchCities();
-        })
-        .catch((error) => {
-          console.error('Error fetching cities:', error);
-        });
-    };
-  
-    fetchCities();
-  };
   
 
   return (

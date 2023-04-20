@@ -7,7 +7,7 @@ function BedroomPrices({ bedroomPrices }) {
   return (
     <div className='bedroom-prices-wrapper'>
     <div className="bedroom-prices-container">
-      {bedrooms.map(([bedroom, price], index) => (
+      {bedrooms.map(([price], index) => (
         <div key={index} className="bedroom-prices">
           <p className='bedroom'>Bedroom {index + 1} </p>
           <p>${price}</p>

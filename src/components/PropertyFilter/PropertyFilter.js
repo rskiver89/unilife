@@ -8,38 +8,41 @@ function PropertyFilter() {
     <div className='searchbar-container'>
 
       <div className='min-bedroom'>
-        <h3>Min Bedroom</h3>
-        <select defaultValue='0'>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </select>
+          <h3>Min Bedroom</h3>
+          <select defaultValue='0'>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+          </select>
         </div>
-        <div className='min-bathroom'>
-        <h3>Min Bathroom</h3>
-        <select defaultValue='0'>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </select>
-        </div>
-        <div className='max-price'>
-        <h3>Max Price</h3>
-        <select defaultValue='0'>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </select>
-        </div>
-        <div className='home-type'>
-        <h3>Home Type</h3>
-        <select defaultValue='0'>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </select>
 
+        <div className='min-bathroom'>
+          <h3>Min Bathroom</h3>
+          <select defaultValue='0'>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+          </select>
         </div>
+
+        <div className='max-price'>
+          <h3>Max Price</h3>
+          <select defaultValue='0'>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+          </select>
+        </div>
+
+        <div className='home-type'>
+          <h3>Home Type</h3>
+          <select defaultValue='0'>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+          </select>
+        </div>
+
   </div>
   )
 }

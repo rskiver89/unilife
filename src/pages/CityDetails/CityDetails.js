@@ -74,29 +74,33 @@ function CityDetails() {
 
       <PropertyFilter />
       <div className='properties-wrapper'>
-      <h2 className='homes-in-city'>{properties.length} Homes in {currentCity?.name}</h2>
-
+        <h2 className='homes-in-city'>{properties.length} Homes in {currentCity?.name}</h2>
 
         <div className='properties-container'>
           {properties.map((property) => (
             <div key={property?._id} className='property-details-container'>
               <img src={property?.images[0]} />
+              
               <div className='property-details'>
                 <div className='price'>
                   <h4>$ {property?.rent}</h4>
                   <p style={{ fontSize: '10px' }}>pppw including bills</p>
                 </div>
+
                 <div className='bedroom-bathroom'>
                   <div className='bedroom'>
                     <MdOutlineBedroomParent style={{ marginRight: '4px' }} />
                     <p>{property?.bedroom_count}</p>
                   </div>
+                  
                   <div className='bathroom'>
                     <MdOutlineBathtub style={{ marginRight: '4px' }} />
                     <p>{property?.bathroom_count}</p>
                   </div>
+                  
                 </div>
               </div>
+
               <div className='more-details'>
                 <div className='property-type-container'>
                   <div className='property-type'>
@@ -110,6 +114,7 @@ function CityDetails() {
                     </address>
                   </div>
                 </div>
+
                 <div className='view-home-container'>
                   <Link to={`/home-details/${property?._id}`} style={{ textDecoration: 'none' }}>
                     <div className='view-home'>
@@ -118,25 +123,26 @@ function CityDetails() {
                     </div>
                   </Link>
                 </div>
+
               </div>
-           
             </div>
         ))}
       </div>
     </div>
-<div className='student-wrapper'>
-    <div className='student-container'>
-      <div className='student-info'>
-        {currentCity && (
-          <>
-            <h2 style={{fontWeight: '500'}}>Being a student in {currentCity?.name}</h2>
-            <p style={{margin: '24px 0 12px 0'}}>{currentCity?.student_life}</p>
-            <p>{currentCity?.universities}</p>
-          </>
-        )}
+
+    <div className='student-wrapper'>
+      <div className='student-container'>
+        <div className='student-info'>
+          {currentCity && (
+            <>
+              <h2 style={{fontWeight: '500'}}>Being a student in {currentCity?.name}</h2>
+              <p style={{margin: '24px 0 12px 0'}}>{currentCity?.student_life}</p>
+              <p>{currentCity?.universities}</p>
+            </>
+          )}
+        </div>
+        <img src={Students} style={{ width: '40%' }} />
       </div>
-      <img src={Students} style={{ width: '40%' }} />
-    </div>
     </div>
   </div>
 );

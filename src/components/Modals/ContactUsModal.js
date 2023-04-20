@@ -45,7 +45,7 @@ function ContactUsModal({ isOpen, onClose }) {
                 </div>
     
                 <div className='message-container'>
-                <div className='personal-info'>
+                  <div className='personal-info'>
                     <label htmlFor='email'>Email</label>
                     <input name='email' type="email" placeholder=" Enter your email" />
                   </div>
@@ -54,8 +54,11 @@ function ContactUsModal({ isOpen, onClose }) {
                     <label htmlFor='message'>Message</label>
                     <textarea name='message' placeholder="Message"></textarea>
                   </div>
+
                   <button className='submit-button' type="submit">Submit</button>
+
                 </div>
+                
               </div>
     
             </form>

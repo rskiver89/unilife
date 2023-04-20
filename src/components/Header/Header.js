@@ -28,6 +28,7 @@ function Header() {
           <AiOutlineSnippets className='icon-logo' />UniLife
         </h1>
       </div>
+      
       <nav>
         <ul className='nav-list'>
           <li>
@@ -38,10 +39,12 @@ function Header() {
           </li>
         </ul>
       </nav>
+
       <ContactUsModal
         isOpen={isContactUsModalOpen}
         onClose={closeContactUsModal}
       />
+
     </div>
   );
 }

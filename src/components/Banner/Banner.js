@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import cover from '../../assets/cover-img.png'
 import './Banner.css'
 

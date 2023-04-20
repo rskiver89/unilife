@@ -35,46 +35,48 @@ function HomeDetails() {
     <div className='home-details-container'>
       {property ? (
       <div>
-        
         <div className='components'>
           <PropertyImages images={property.images} />
           <PropertySummary property={property} onBookViewingClick={toggleModal} />
-
         </div>
 
         <div className='more-home-details'>
-        <div className='description'>
-          <h2>Description</h2>
-          <p>{property?.property_description}</p>
-          <div className='key-features'>
-            <h2>Key Features</h2>
-            {
-              keyFeatures?.map((feature, index) => {
-                return (
-                  <ul key={index}>
-                    <li><HiOutlineCheck style={{marginRight: '8px'}} />{feature}</li>
-                  </ul>
-                )
-              })
-            }
-            </div>
-        </div>
-        <div className='bedrooms'>
-        <h2>Bedroom Prices</h2>
-          <BedroomPrices bedroomPrices={property.bedroom_prices} />
-        </div>
+          <div className='description'>
+            <h2>Description</h2>
+            <p>{property?.property_description}</p>
+            
+            <div className='key-features'>
+              <h2>Key Features</h2>
+              {
+                keyFeatures?.map((feature, index) => {
+                  return (
+                    <ul key={index}>
+                      <li><HiOutlineCheck style={{marginRight: '8px'}} />{feature}</li>
+                    </ul>
+                  )
+                })
+              }
+              </div>
+          </div>
+
+          <div className='bedrooms'>
+            <h2>Bedroom Prices</h2>
+            <BedroomPrices bedroomPrices={property.bedroom_prices} />
+          </div>
+
         </div>
       </div>
-) : (
-      <p>Loading property details...</p>
-)}
-{property && (
-      <ViewingModal
-        isOpen={isModalOpen}
-        address={`${property.address.street}, ${property.address.city}, ${property.address.postcode}`}
-        onClose={toggleModal}
-      />
-)}
+        ) : (
+              <p>Loading property details...</p>
+        )}
+
+        {property && (
+              <ViewingModal
+                isOpen={isModalOpen}
+                address={`${property.address.street}, ${property.address.city}, ${property.address.postcode}`}
+                onClose={toggleModal}
+              />
+        )}     
     </div>
   );
 }

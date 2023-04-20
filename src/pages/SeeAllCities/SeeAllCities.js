@@ -8,11 +8,11 @@ function SeeAllCities({cities}) {
 
   return (
     <div>
-        <Banner mainText='Student Accomodations' subText='UniLife have student accommodation available across the UK.
-Whatever you’re after, we can help you find the right student accommodation for you. ' />
+      <Banner mainText='Student Accomodations' subText='UniLife have student accommodation available across the UK.
+      Whatever you’re after, we can help you find the right student accommodation for you. ' />
 
-    <div className='cities-container'>
-      <h1 style={{marginBottom: '32px'}}>Search by city</h1>
+      <div className='cities-container'>
+        <h1 style={{marginBottom: '32px'}}>Search by city</h1>
         <div className='cities-grid'>
                 {
           cities?.map((item) => {
@@ -24,7 +24,7 @@ Whatever you’re after, we can help you find the right student accommodation fo
           })
         }
       </div>
-    </div>
+      </div>
     </div>
   )
 }
