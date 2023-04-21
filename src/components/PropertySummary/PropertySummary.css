@@ -1,80 +1,104 @@
 .property-summary-container {
-    width: 50%;
+  width: 50%;
 }
 
 .property-summary {
-    margin: 16px;
-    padding: 20px;
-    border: 1px solid gray;
-    border-radius: 16px;
-    text-align: center;
+  margin: 16px;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.property-address {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.property-address h1 {
+  margin: 16px;
+  width: 50%;
+  font-weight: 400;
+}
+
+.summary-item {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  padding: 10px;
+  margin: 8px;
+}
+
+.summary-name {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.summary-icon-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3A5295;
+  font-size: 24px;
+  margin: 12px;
+  font-weight: 500;
+}
+
+.summary-icon {
+  margin-right: 5px;
+}
+
+.summary-info {
+  line-height: 24px;
+}
+
+.summary-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3A5295;
+  color: white;
+  height: 48px;
+  width: 50%;
+  border-radius: 24px;
+  margin: 32px 8px;
+}
+
+@media (max-width: 1145px) {
+  .property-summary-container {
+    width: 90%;
   }
-  
-  .property-address {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid gray;
+}
+
+@media (max-width: 768px) {
+  .property-summary-container {
+    width: 100%;
+    margin: 16px 0;
   }
 
   .property-address h1 {
-    margin: 16px;
-    width: 50%;
-    font-weight: 400;
+    width: 100%;
+    margin: 16px 0;
   }
-  
+
   .summary-item {
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
-    padding: 10px;
-    margin: 8px;
-  }
-
-  .summary-name {
-    font-size: 12px;
-    margin-bottom: 8px;
-  }
-  
-  .summary-icon-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #3A5295;
-    font-size: 24px;
-    margin: 12px;
-    font-weight: 500;
-  }
-  
-  .summary-icon {
-    margin-right: 5px;
-  }
-
-  .summary-info {
-    line-height: 24px;
+    width: 100%;
+    margin: 16px 0;
   }
 
   .summary-buttons-container {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
 
   .summary-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #3A5295;
-    color: white;
-    height: 48px;
-    width: 50%;
-    border-radius: 24px;
-    margin: 32px 8px;
+    width: 100%;
+    margin: 16px 0;
   }
-  
-  @media (max-width: 1145px) {
-    .property-summary-container {
-        width: 90%;
-    }
-  }
-
-  
+}

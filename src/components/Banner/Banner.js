@@ -10,7 +10,7 @@ function Banner(props) {
 
   return (
     <div className='banner'>
-      <img style={{width:'100%', filter:'brightness(50%)'}} src={cover} alt="Banner" />
+      <img className='banner-image' src={cover} alt="Banner" />
       <div className='banner-slogan'>
         <h1 style={{fontSize:"2em"}}>{mainText}</h1>
         <h1 style={{fontSize:"2em" , marginBottom:'8px'}}>{mainTextTwo}</h1>

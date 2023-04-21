@@ -38,8 +38,7 @@
   }
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .property-images {
     padding: 8px;
   }

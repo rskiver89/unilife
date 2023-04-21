@@ -1,8 +1,8 @@
 .filter-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
-    padding: 16px;
+    padding: 12px;
     margin-top: -175px;
     background-color: rgba(255, 255, 255, 0.92);
     position: absolute;
@@ -10,18 +10,40 @@
     width: 80%;
     border-radius: 24px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-select {
+  }
+  
+  select {
     width: 160px;
-    height: 40%;
+    height: auto;
     margin: 8px;
     box-sizing: border-box;
-}
-
-.filter-container h3 {
+  }
+  
+  .filter-container h3 {
     margin-left: 12px;
     margin-top: 12px;
     font-weight: 500;
     font-size: 16px;
-}
+  }
+
+  @media (max-width: 400px) {
+    .filter-container {
+      width: 90%;
+      left: 5%;
+      padding: 8px;
+      margin-top: -110px;
+    }
+  
+    select {
+      width: 125px;
+      height: 28px;
+      max-width: 300px;
+      margin: 4px;
+    }
+  
+    .filter-container h3 {
+      display: none;
+    }
+  }
+  
+  

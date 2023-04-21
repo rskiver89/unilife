@@ -33,3 +33,9 @@
 .all-cities-card:hover h3 {
   color: white;
 }
+
+@media (max-width: 400px) {
+  .cities-container h1 {
+    margin: 24px 0;
+  }
+}

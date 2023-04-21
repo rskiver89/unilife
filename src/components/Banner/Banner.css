@@ -5,6 +5,12 @@
     margin-bottom: 120px;
 }
 
+.banner-image {
+  width: 100%;
+  height: auto;
+  filter: brightness(50%);
+}
+
 .banner-slogan {
     margin-bottom: 32px;
     word-wrap: none;
@@ -19,17 +25,20 @@
     font-weight: 500;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .banner {
     flex-direction: column;
     margin-bottom: 60px;
   }
 
+  .banner-image {
+    height: 180px;
+  }
+
   .banner-slogan {
     max-width: 90%;
     margin-bottom: 16px;
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .banner-slogan h1 {

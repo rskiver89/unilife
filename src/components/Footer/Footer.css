@@ -72,16 +72,23 @@
     margin: 12px;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .contact-container {
     flex-direction: column;
     height: auto;
     padding: 16px;
   }
 
+  .contact-container h3 {
+    margin: 12px 0;
+  }
+
   .contact {
     width: 100%;
+  }
+
+  .contact p {
+    margin: 12px 0;
   }
 
   .footer-content-container {
@@ -101,7 +108,10 @@
   }
 
   .socialize {
-    flex-direction: row;
     justify-content: center;
+  }
+
+  .social-icon {
+    margin: 12px 0;
   }
 }
