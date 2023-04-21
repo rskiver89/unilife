@@ -35,6 +35,7 @@
 @media (max-width: 1145px) {
     .home-details-container {
         align-items: center;
+        width: 90%;
     }
 
     .components,
