@@ -101,6 +101,11 @@
   .modal {
     width: 95%;
     padding: 16px;
+    max-height: 90%;
+  }
+
+  .modal-header p {
+    font-size: 10px;
   }
 
   .icon-close {
@@ -110,5 +115,18 @@
 
   .personal-info {
     max-width: 100%;
+    font-size: 12px;
+  }
+
+  .personal-info input, select {
+    height: 30px;
+  }
+
+  .personal-info textarea {
+    height: 60px;
+  }
+
+  .submit-button {
+    margin: 16px 0;
   }
 }

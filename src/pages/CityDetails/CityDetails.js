@@ -119,7 +119,7 @@ function CityDetails() {
                   <Link to={`/home-details/${property?._id}`} style={{ textDecoration: 'none' }}>
                     <div className='view-home'>
                     <MdHome size={20}/>
-                    <h4>View Home</h4>
+                    <h4 style={{fontWeight: '500'}}>View Home</h4>
                     </div>
                   </Link>
                 </div>
