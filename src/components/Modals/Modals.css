@@ -31,14 +31,19 @@
   font-size: 12px;
 }
 
+.icon-close {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin: -20px;
+}
+
 .close-button {
-  position: absolute;
   background: none;
   border: none;
   font-size: 12px;
   cursor: pointer;
-  margin-left: 555px;
-  margin-top: -10px;
+  text-align: right;
 }
 
 .form-container {
@@ -86,13 +91,23 @@
   margin: 32px 0;
 }
 
-@media screen and (max-width: 768px) {
-  .personal-info {
-    max-width: calc(50% - 8px);
+@media screen and (max-width: 674px) {
+  .form-container {
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .modal {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .icon-close {
+    width: 48px;
+    margin: -16px;
+  }
+
   .personal-info {
     max-width: 100%;
   }

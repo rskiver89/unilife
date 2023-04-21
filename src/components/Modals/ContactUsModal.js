@@ -10,7 +10,6 @@ function ContactUsModal({ isOpen, onClose }) {
       return (
         <div className="modal-backdrop">
           <div className="modal">
-            <button onClick={onClose} className="close-button"><AiOutlineCloseCircle size={15} /></button>
             <div className='modal-header-container'>
               <div className='modal-header'>
                 <h2 style={{marginBottom: '16px'}}>Contact us</h2>
@@ -18,7 +17,10 @@ function ContactUsModal({ isOpen, onClose }) {
                     Looking forward to hear from you.
                 </p>
               </div>
+              <div className='icon-close'>
+              <button onClick={onClose} className="close-button"><AiOutlineCloseCircle size={15} /></button>
               <AiOutlineMail size={40} style={{color: '#3A5295'}} />
+              </div>
             </div>
             
             <form>

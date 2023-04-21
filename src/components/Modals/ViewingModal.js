@@ -11,13 +11,15 @@ function ViewingModal({ isOpen, address, onClose }) {
   return (
     <div className="modal-backdrop">
       <div className="modal">
-        <button onClick={onClose} className="close-button"><AiOutlineCloseCircle size={15} /></button>
         <div className='modal-header-container'>
           <div className='modal-header'>
             <h2 style={{marginBottom: '16px'}}>Book a Viewing</h2>
             <address>{address}</address>
           </div>
-          <MdOutlineAddHomeWork size={40} style={{color: '#3A5295'}} />
+          <div className='icon-close'>
+            <button onClick={onClose} className="close-button"><AiOutlineCloseCircle size={15} /></button>
+            <MdOutlineAddHomeWork size={40} style={{color: '#3A5295'}} />
+          </div>
         </div>
         
         <form>
