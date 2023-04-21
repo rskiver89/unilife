@@ -37,3 +37,20 @@
 .contact-us {
     cursor: pointer;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+  }
+
+  .nav-list {
+    margin-top: 8px;
+  }
+
+  .nav-list li {
+    font-size: 14px;
+  }
+}

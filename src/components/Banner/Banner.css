@@ -18,3 +18,21 @@
 .banner-slogan h1 {
     font-weight: 500;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  .banner-slogan {
+    max-width: 90%;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  .banner-slogan h1 {
+    font-size: 24px;
+  }
+}

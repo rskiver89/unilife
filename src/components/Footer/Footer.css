@@ -71,3 +71,37 @@
 .copyright p {
     margin: 12px;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+  }
+
+  .contact {
+    width: 100%;
+  }
+
+  .footer-content-container {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    margin: 8px 0;
+  }
+
+  .footer-content li {
+    margin: 8px;
+  }
+
+  .socialize {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
