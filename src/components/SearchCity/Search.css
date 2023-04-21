@@ -32,9 +32,9 @@
   @media (max-width: 400px) {
     .searchbar-container {
       width: 80%;
-      height: 8%;
+      height: 10%;
       left: 10%;
-      margin-top: -100px;
+      margin-top: -90px;
       align-items: center;
     }
   
