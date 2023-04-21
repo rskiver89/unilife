@@ -34,11 +34,11 @@
 
 @media (max-width: 1145px) {
   .property-images {
-    width: 100%;
+    width: 90%;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .property-images {
     padding: 8px;
   }

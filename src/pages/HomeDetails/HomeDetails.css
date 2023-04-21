@@ -1,3 +1,8 @@
+.home-details-container {
+    /* padding: 16px; */
+    /* align-items: center; */
+}
+
 .components {
     display: flex;
     margin: 16px;
@@ -33,16 +38,11 @@
 }
 
 @media (max-width: 1145px) {
-    .home-details-container {
-        align-items: center;
-        width: 90%;
-    }
 
     .components,
     .more-home-details {
         flex-direction: column;
         align-items: center;
-        width: 100%;
     }
 
     .description,
