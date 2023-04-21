@@ -34,7 +34,8 @@
       width: 80%;
       height: 8%;
       left: 10%;
-      margin-top: -90px;
+      margin-top: -100px;
+      align-items: center;
     }
   
     .search-city {
