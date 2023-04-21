@@ -142,3 +142,41 @@ h3 {
     color: white;
     margin: 20px 45px;
 }
+
+/* ... Rest of your styles ... */
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+
+    .city-item img {
+      width: 280px;
+      height: 200px;
+    }
+  
+    .city-name {
+      font-size: 20px;
+    }
+  
+    .compare-container {
+      padding: 12px 0;
+    }
+  
+    .compare-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .instructions-container {
+      flex-direction: column;
+    }
+  
+    .instructions-content-container {
+      width: 100%;
+      padding: 32px 16px;
+    }
+  
+    .search-compare-btn {
+      margin: 20px auto;
+    }
+  }
+  
