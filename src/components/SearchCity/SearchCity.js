@@ -12,8 +12,7 @@ function SearchCity({ allCities }) {
 
   const handleSearch = () => {
     if (city) {
-      const cityName = city.replace(/ /g, '-').toLowerCase();
-      navigate(`/city-details/${cityName}`);
+      navigate(`/city-details/${city}`);
     }
   };
 

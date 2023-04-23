@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css';
-import { AiOutlineHeart, AiOutlineMail, AiOutlineSnippets, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineHeart, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
+import { RiHomeHeartLine } from 'react-icons/ri'
 import ContactUsModal from '../Modals/ContactUsModal';
 import { useNavigate } from 'react-router-dom';
 
@@ -30,7 +31,7 @@ function Header() {
     <div className={`nav-container ${menuVisible ? 'expanded-header' : ''}`}>
       <div onClick={navigateToHomepage} className='logo'>
         <h1>
-          <AiOutlineSnippets className='icon-logo' />UniLife
+          <RiHomeHeartLine className='icon-logo' />UniLife
         </h1>
       </div>
 
