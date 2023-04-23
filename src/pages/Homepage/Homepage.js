@@ -14,7 +14,7 @@ import person from '../../assets/person.png'
 import bestSelection from '../../assets/Vector-4.png'
 import yourFavorite from '../../assets/Vector-5.png'
 
-function Homepage({cities}) {
+function Homepage({ cities, allCities }) {
 
 
   const instructionIconStyle = {
@@ -31,7 +31,7 @@ function Homepage({cities}) {
         <Banner mainText='Find student homes' mainTextTwo='with bills included' subText='A simple and faster way to search for student accommodation' />
       </div>
 
-      <SearchCity />
+      <SearchCity allCities={allCities} />
       <div className='cities-wrapper'>
         <div className='cities-container-home'>
           <h2 style={{marginBottom: '24px'}}>Student accommodations in our top cities</h2>

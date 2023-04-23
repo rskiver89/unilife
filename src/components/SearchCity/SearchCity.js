@@ -1,29 +1,37 @@
-import React, {useState} from 'react'
-import './Search.css'
+import React, { useState } from 'react';
+import './Search.css';
+import { useNavigate } from 'react-router-dom';
 
-function SearchCity() {
+function SearchCity({ allCities }) {
+  const [city, setCity] = useState('');
+  const navigate = useNavigate();
 
-    const [city, setCity] = useState('');
-  
-    const handleCityChange = (event) => {
-      setCity(event.target.value);
+  const handleCityChange = (event) => {
+    setCity(event.target.value);
+  };
+
+  const handleSearch = () => {
+    if (city) {
+      const cityName = city.replace(/ /g, '-').toLowerCase();
+      navigate(`/city-details/${cityName}`);
     }
-  
-    const handleSearch = () => {
-      console.log(``);
-    }
+  };
 
   return (
     <div className='searchbar-container'>
       <select defaultValue={city} onChange={handleCityChange} className='search-city'>
         <option value="">Select a city</option>
-        <option value="Newcastle">Newcastle</option>
-        <option value="Liverpool">Liverpool</option>
-        <option value="Nottingham">Nottingham</option>
+        {allCities.map((city) => (
+          <option key={city._id} value={city.name}>
+            {city.name}
+          </option>
+        ))}
       </select>
-      <button onClick={handleSearch} className='find-homes-button'>Find Homes</button>
-  </div>
-  )
+      <button onClick={handleSearch} className='find-homes-button'>
+        Find Homes
+      </button>
+    </div>
+  );
 }
 
-export default SearchCity
+export default SearchCity;

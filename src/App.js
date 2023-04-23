@@ -49,7 +49,7 @@ function App() {
           <div>Loading...</div>
         ) : (
           <Routes>
-            <Route path='/' element={<Homepage cities={firstNineCities} />} />
+            <Route path='/' element={<Homepage cities={firstNineCities} allCities={allCities} />} />
             <Route path='/see-all-cities/' element={<SeeAllCities cities={allCities} />} />
             <Route path='/city-details/:city' element={<CityDetails cityDetails={cityDetails} />} />
             <Route path='/home-details/:propertyId' element={<HomeDetails />} />
