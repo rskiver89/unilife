@@ -14,15 +14,6 @@ const toggleShortlist = () => {
   }
 };
 
-// const shortlistProperty = () => {
-//   if (shortlistedHomes.some((home) => home._id === property._id)) {
-//     setShortlistedHomes(shortlistedHomes.filter((home) => home._id !== property._id));
-//   } else {
-//     setShortlistedHomes([...shortlistedHomes, property]);
-//   }
-// };
-
-
   return (
     <div className='property-summary-container'>
       <div className="property-summary">
