@@ -57,7 +57,7 @@ function ContactUsModal({ isOpen, onClose }) {
                     <textarea name='message' placeholder="Message"></textarea>
                   </div>
 
-                  <button className='submit-button' type="submit">Submit</button>
+                  <button onClick={onClose} className='submit-button' type="submit">Submit</button>
 
                 </div>
                 
