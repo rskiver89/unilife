@@ -13,7 +13,7 @@ function ShortlistModal({ isOpen, onClose, shortlistedHomes }) {
   return (
     <div className="modal-backdrop">
       <div className="modal">
-        <div className="modal-header-container">
+        <div className="modal-header-container shortlist-modal-header-container">
           <h2 style={{marginBottom: '32px'}}>Shortlisted Homes</h2>
             <div className='icon-close'>
               <button onClick={onClose} className="close-button"><AiOutlineCloseCircle size={15} /></button>
@@ -25,7 +25,7 @@ function ShortlistModal({ isOpen, onClose, shortlistedHomes }) {
           shortlistedHomes.map((home) => (
             <div key={home} className='shortlisted-home'>
                <img src={home.images[0]} style={{width: '20%', borderRadius: '8px'}} />
-               <div className='shortlist-link'>
+               <div className='shortlist-address'>
                     <h3>{home.address.street}</h3>
                     <h3>{home.address.city}, {home.address.postcode}</h3>
                 </div>

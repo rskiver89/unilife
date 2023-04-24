@@ -33,13 +33,10 @@
   .icon-logo {
     margin-right: 8px;
   }
-  
-  .contact-us {
-    cursor: pointer;
-  }
 
   .contact-us, .shortlist {
     display: flex;
+    cursor: pointer;
   }
   
   /* Hamburger menu */

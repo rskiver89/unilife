@@ -110,6 +110,7 @@
   margin: 20px 45px;
 }
 
+
 @media screen and (max-width: 674px) {
   .form-container {
     justify-content: center;
@@ -147,5 +148,14 @@
 
   .submit-button {
     margin: 16px 0;
+  }
+
+  .shortlist-address {
+    font-size: 8px;
+  }
+
+  .shortlist-view-home {
+    width: 80px;
+    font-size: 8px;
   }
 }
