@@ -1,12 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './PropertyFilter.css';
 
-function PropertyFilter() {
+function PropertyFilter({ onFilterChange }) {
+  const [filter, setFilter] = useState({
+    minBedroom: '',
+    minBathroom: '',
+    maxPrice: '',
+    homeType: '',
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFilter((prevFilter) => ({
+      ...prevFilter,
+      [name]: value,
+    }));
+    onFilterChange({ ...filter, [name]: value });
+  };
+
   return (
     <div className="filter-container">
       <div className="min-bedroom">
         <h3>Min Bedroom</h3>
-        <select>
+        <select name="minBedroom" value={filter.minBedroom} onChange={handleChange}>
           <option value="">Any bedroom</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -18,7 +34,7 @@ function PropertyFilter() {
 
       <div className="min-bathroom">
         <h3>Min Bathroom</h3>
-        <select>
+        <select name="minBathroom" value={filter.minBathroom} onChange={handleChange}>
           <option value="">Any bathroom</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -29,7 +45,7 @@ function PropertyFilter() {
 
       <div className="max-price">
         <h3>Max Price</h3>
-        <select>
+        <select name="maxPrice" value={filter.maxPrice} onChange={handleChange}>
           <option value="">Any price</option>
           <option value="1000">$1,000</option>
           <option value="2000">$2,000</option>
@@ -41,7 +57,7 @@ function PropertyFilter() {
 
       <div className="home-type">
         <h3>Home Type</h3>
-        <select>
+        <select name="homeType" value={filter.homeType} onChange={handleChange}>
           <option value="">Any type</option>
           <option value="apartment">Apartment</option>
           <option value="condo">Detached</option>

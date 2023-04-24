@@ -68,16 +68,41 @@ function CityDetails() {
     setLoading(false);
   };
 
+  const [filter, setFilter] = useState({
+    minBedroom: '',
+    minBathroom: '',
+    maxPrice: '',
+    homeType: '',
+  });
+
+  // Filter properties based on the filter data
+  const filteredProperties = properties.filter((property) => {
+    const { minBedroom, minBathroom, maxPrice, homeType } = filter;
+    return (
+      (!minBedroom || property.bedroom_count >= parseInt(minBedroom)) &&
+      (!minBathroom || property.bathroom_count >= parseInt(minBathroom)) &&
+      (!maxPrice || property.rent <= parseInt(maxPrice)) &&
+      (!homeType || property.property_type.toLowerCase() === homeType.toLowerCase())
+    );
+  });
+
+  // Callback function to handle filter change from PropertyFilter component
+  const handleFilterChange = (newFilter) => {
+    setFilter(newFilter);
+  };
+
   return (
     <div>
       <Banner mainText='Search Accomodation' subText='Whatever you’re after, we can help you find the right student accommodation for you. ' />
 
-      <PropertyFilter />
-      <div className='properties-wrapper'>
-        <h2 className='homes-in-city'>{properties.length} Homes in {currentCity?.name}</h2>
+      <PropertyFilter onFilterChange={handleFilterChange} />
+      <div className="properties-wrapper">
+        <h2 className="homes-in-city">
+          {filteredProperties.length} Homes in {currentCity?.name}
+        </h2>
 
         <div className='properties-container'>
-          {properties.map((property) => (
+          {filteredProperties.map((property) => (
             <div key={property?._id} className='property-details-container'>
               <img src={property?.images[0]} />
               
