@@ -14,13 +14,13 @@ const toggleShortlist = () => {
   }
 };
 
-const shortlistProperty = () => {
-  if (shortlistedHomes.some((home) => home._id === property._id)) {
-    setShortlistedHomes(shortlistedHomes.filter((home) => home._id !== property._id));
-  } else {
-    setShortlistedHomes([...shortlistedHomes, property]);
-  }
-};
+// const shortlistProperty = () => {
+//   if (shortlistedHomes.some((home) => home._id === property._id)) {
+//     setShortlistedHomes(shortlistedHomes.filter((home) => home._id !== property._id));
+//   } else {
+//     setShortlistedHomes([...shortlistedHomes, property]);
+//   }
+// };
 
 
   return (

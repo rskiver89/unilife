@@ -29,7 +29,7 @@ function ShortlistModal({ isOpen, onClose, shortlistedHomes }) {
                     <h3>{home.address.street}</h3>
                     <h3>{home.address.city}, {home.address.postcode}</h3>
                 </div>
-                <Link to={`/home-details/${home._id}`} style={{textDecoration: 'none', color: 'black'}}><button className='shortlist-view-home'>View Home</button></Link>
+                <Link to={`/home-details/${home._id}`} style={{cursor: 'auto'}}><button className='shortlist-view-home'>View Home</button></Link>
             </div>
           ))
           }
