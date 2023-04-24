@@ -46,7 +46,7 @@ function ViewingModal({ isOpen, address, onClose }) {
                 <label htmlFor='message'>Message</label>
                 <textarea name='message' placeholder="Message"></textarea>
               </div>
-              <button className='submit-button' type="submit">Submit</button>
+              <button onClick={onClose} className='submit-button' type="submit">Submit</button>
             </div>
           </div>
 
