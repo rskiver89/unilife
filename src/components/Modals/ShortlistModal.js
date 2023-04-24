@@ -14,7 +14,7 @@ function ShortlistModal({ isOpen, onClose, shortlistedHomes }) {
     <div className="modal-backdrop">
       <div className="modal">
         <div className="modal-header-container shortlist-modal-header-container">
-          <h2 style={{marginBottom: '32px'}}>Shortlisted Homes</h2>
+          <h2 style={{marginBottom: '32px'}}>Shortlist</h2>
             <div className='icon-close'>
               <button onClick={onClose} className="close-button"><AiOutlineCloseCircle size={15} /></button>
               <AiFillHeart size={40} style={{color: '#3A5295'}} />
@@ -29,7 +29,7 @@ function ShortlistModal({ isOpen, onClose, shortlistedHomes }) {
                     <h3>{home.address.street}</h3>
                     <h3>{home.address.city}, {home.address.postcode}</h3>
                 </div>
-                <Link to={`/home-details/${home._id}`} style={{cursor: 'auto'}}><button className='shortlist-view-home'>View Home</button></Link>
+                <Link to={`/home-details/${home._id}`} style={{cursor: 'auto'}}><button onClick={onClose} className='shortlist-view-home'>View Home</button></Link>
             </div>
           ))
           }
