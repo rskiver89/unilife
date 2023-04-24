@@ -98,7 +98,7 @@ function CityDetails() {
       <PropertyFilter onFilterChange={handleFilterChange} />
       <div className="properties-wrapper">
         <h2 className="homes-in-city">
-          {filteredProperties.length} Homes in {currentCity?.name}
+          {filteredProperties?.length} Homes in {currentCity?.name}
         </h2>
 
         <div className='properties-container'>
