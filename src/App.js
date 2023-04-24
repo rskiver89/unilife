@@ -14,6 +14,8 @@ function App() {
   const [allCities, setAllCities] = useState([]);
   const [cityDetails, setCityDetails] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [shortlistedHomes, setShortlistedHomes] = useState([]);
+
 
   const getAllCities = (currentPage = 1, cities = []) => {
     axios
@@ -44,7 +46,8 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Header />
+      <Header  shortlistedHomes={shortlistedHomes} setShortlistedHomes={setShortlistedHomes} />
+
         {loading ? (
           <div>Loading...</div>
         ) : (
@@ -52,7 +55,7 @@ function App() {
             <Route path='/' element={<Homepage cities={firstNineCities} />} />
             <Route path='/see-all-cities/' element={<SeeAllCities cities={allCities} />} />
             <Route path='/city-details/:city' element={<CityDetails cityDetails={cityDetails} />} />
-            <Route path='/home-details/:propertyId' element={<HomeDetails />} />
+            <Route path='/home-details/:propertyId' element={<HomeDetails shortlistedHomes={shortlistedHomes} setShortlistedHomes={setShortlistedHomes} />} />
           </Routes>
         )}
         <Footer />
