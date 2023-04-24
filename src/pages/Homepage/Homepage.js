@@ -100,7 +100,7 @@ function Homepage({ cities, allCities }) {
               </div>
             </div>
 
-            <button className='search-compare-btn'>Search & Compare</button>
+            <Link to='/see-all-cities' ><button className='search-compare-btn'>Search & Compare</button></Link>
             
           </div>
 

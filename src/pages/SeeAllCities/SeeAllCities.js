@@ -5,6 +5,10 @@ import Banner from '../../components/Banner/Banner';
 
 function SeeAllCities({cities}) {
 
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
+
 
   return (
     <div>
