@@ -9,7 +9,7 @@ import './HomeDetails.css'
 import {HiOutlineCheck} from 'react-icons/hi'
 
 
-function HomeDetails() {
+function HomeDetails({ shortlistedHomes, setShortlistedHomes }) {
   const { propertyId } = useParams();
   const [property, setProperty] = useState(null);
   const [keyFeatures, setKeyFeatures] = useState();
@@ -37,7 +37,8 @@ function HomeDetails() {
       <div>
         <div className='components'>
           <PropertyImages images={property?.images} />
-          <PropertySummary property={property} onBookViewingClick={toggleModal} />
+          <PropertySummary property={property} shortlistedHomes={shortlistedHomes} setShortlistedHomes={setShortlistedHomes} onBookViewingClick={toggleModal} />
+
         </div>
 
         <div className='more-home-details'>

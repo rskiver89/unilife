@@ -1,14 +1,34 @@
 import React from 'react';
 import './PropertySummary.css';
 import {MdOutlineBedroomParent, MdOutlineBathtub, MdHome} from 'react-icons/md'
-import {AiOutlineHeart} from 'react-icons/ai';
+import {AiOutlineHeart, AiFillHeart} from 'react-icons/ai';
 
-function PropertySummary({ property, onBookViewingClick }) {
+function PropertySummary({ property, onBookViewingClick, shortlistedHomes, setShortlistedHomes }) {
+  const isShortlisted = shortlistedHomes.some((home) => home._id === property._id);
+
+const toggleShortlist = () => {
+  if (isShortlisted) {
+    setShortlistedHomes(shortlistedHomes.filter((home) => home._id !== property._id));
+  } else {
+    setShortlistedHomes([...shortlistedHomes, property]);
+  }
+};
+
+const shortlistProperty = () => {
+  if (shortlistedHomes.some((home) => home._id === property._id)) {
+    setShortlistedHomes(shortlistedHomes.filter((home) => home._id !== property._id));
+  } else {
+    setShortlistedHomes([...shortlistedHomes, property]);
+  }
+};
+
+
   return (
     <div className='property-summary-container'>
       <div className="property-summary">
         <div className='property-address'>
-          <h1>{property.address.street}, {property.address.city}, {property.address.postcode}</h1>
+          <h1>{property.address.street}</h1>
+          <h1>{property.address.city}, {property.address.postcode}</h1>
         </div>
 
         <div className='summary-item-container'>
@@ -60,7 +80,17 @@ function PropertySummary({ property, onBookViewingClick }) {
       </div>
 
       <div className='summary-buttons-container'>
-        <button className='summary-button' style={{backgroundColor: 'white', color: 'black'}}><AiOutlineHeart style={{marginRight: '8px'}} />Shortlist</button>
+        {
+          isShortlisted
+          ? 
+          <button className="summary-button" style={{ backgroundColor: "white", color: "black" }} onClick={toggleShortlist}>
+          <AiFillHeart style={{ marginRight: "8px" }} />Remove from Shortlist
+          </button>
+          :
+          <button className="summary-button" style={{ backgroundColor: "white", color: "black" }} onClick={toggleShortlist}>
+          <AiOutlineHeart style={{ marginRight: "8px" }} />Shortlist
+          </button>
+        }
         <button className='summary-button' onClick={onBookViewingClick}>Book Viewing</button>
       </div>
     </div>

@@ -91,6 +91,25 @@
   margin: 32px 0;
 }
 
+/* Shortlist Modal */
+
+.shortlisted-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px;
+  width: 100%;
+}
+
+.shortlist-view-home {
+  width: 120px;
+  height: 30px;
+  border-radius: 12px;
+  background: #3A5295;
+  color: white;
+  margin: 20px 45px;
+}
+
 @media screen and (max-width: 674px) {
   .form-container {
     justify-content: center;

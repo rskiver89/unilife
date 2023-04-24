@@ -4,10 +4,20 @@ import { AiOutlineHeart, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { RiHomeHeartLine } from 'react-icons/ri'
 import ContactUsModal from '../Modals/ContactUsModal';
 import { useNavigate } from 'react-router-dom';
+import ShortlistModal from '../Modals/ShortlistModal';
 
-function Header() {
+function Header({ shortlistedHomes, setShortlistedHomes }) {
   const [isContactUsModalOpen, setIsContactUsModalOpen] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
+  const [isShortlistModalOpen, setIsShortlistModalOpen] = useState(false);
+
+const openShortlistModal = () => {
+  setIsShortlistModalOpen(true);
+};
+
+const closeShortlistModal = () => {
+  setIsShortlistModalOpen(false);
+};
 
   const openContactUsModal = () => {
     setIsContactUsModalOpen(true);
@@ -37,12 +47,13 @@ function Header() {
 
       <nav>
         <ul className='nav-list'>
-          <li>
-            <div className='shortlist'>
+        <li>
+          <div className='shortlist' onClick={openShortlistModal}>
             <AiOutlineHeart className='nav-icon' />
             <p>Shortlist</p>
-            </div>
-          </li>
+          </div>
+        </li>
+
           <li>
             <div onClick={openContactUsModal} className='contact-us'>
             <AiOutlineMail className='nav-icon' />
@@ -56,11 +67,12 @@ function Header() {
         <AiOutlineMenu className='hamburger-icon' onClick={toggleMenu} />
         <ul className={`menu-items ${menuVisible ? 'visible' : ''}`}>
         <li>
-            <div className='shortlist'>
+          <div className='shortlist' onClick={openShortlistModal}>
             <AiOutlineHeart className='nav-icon' />
             <p>Shortlist</p>
-            </div>
-          </li>
+          </div>
+        </li>
+
           <li>
             <div onClick={openContactUsModal} className='contact-us'>
             <AiOutlineMail className='nav-icon' />
@@ -69,6 +81,12 @@ function Header() {
           </li>
         </ul>
       </div>
+
+      <ShortlistModal
+        isOpen={isShortlistModalOpen}
+        onClose={closeShortlistModal}
+        shortlistedHomes={shortlistedHomes}
+      />
 
       <ContactUsModal
         isOpen={isContactUsModalOpen}
